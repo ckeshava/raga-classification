@@ -14,31 +14,31 @@
 
 # CRITICAL:
 # pooling factors <64 triggers resource constraints. Effect on accuracy??
-
+# why are all the x values dimensions equal ????
 
 
 import tensorflow as tf
 import numpy as np
-import os, glob
-import warnings
-warnings.filterwarnings('ignore')
+# import os, glob
+# import warnings
+# warnings.filterwarnings('ignore')
 
-import image_preprocess
 import config
+import scipy_read_images
 
 
 
 
 
 # to be modified
-def get_data(input_dir="input/"):
-    # x = np.random.rand(config.LENGTH, config.BREADTH, config.NUM_CHANNELS)
-    # y_true = np.random.rand(config.NUM_RAGAS, 1) 
+def get_train_data(input_dir=config.INPUT_DIR):
+    x, y_temp = scipy_read_images.get_data() 
+    y_true = np.zeros([y_temp.shape[0], config.NUM_RAGAS])
 
-    x = image_preprocess.get_image(input_dir) 
-    y_true = image_preprocess.get_label(input_dir)
-    
-
+    for i in range(y_temp.shape[0]):
+        temp = np.zeros(config.NUM_RAGAS)
+        temp[int(y_temp[i])] = 1
+        y_true[i] = temp
     return x, y_true  
 
 
@@ -61,16 +61,11 @@ def cnn_model_fn(x):
 
     print(template.format(conv1, conv1.shape))
     
-
-    
-
     # Pooling Layer #1
     pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[32, 32], strides=32, padding="same")
     # pool1 = conv1
 
     print(template.format(pool1, pool1.shape))
-
-
 
     # Convolutional Layer #2 and Pooling Layer #2
     conv2 = tf.layers.conv2d(
@@ -106,9 +101,6 @@ def cnn_model_fn(x):
     return tf.reshape(logits, [config.NUM_RAGAS, -1])
     # return logits
 
-def dummy_model(x):
-    w = tf.Variable(dtype=tf.float32, shape=(config.LENGTH, config.NUM_RAGAS), initial_value=tf.zeros(config.LENGTH, config.NUM_RAGAS))
-    return tf.matmul(x, w)
 
 def repeated_forward_prop(x):
     
@@ -129,12 +121,17 @@ def forward_prop(x):
     model = tf.layers.Dense(units=config.NUM_RAGAS, activation=None)
     return model(x)
 
-def train_model():
-    x = tf.placeholder(tf.float32, shape=(1, config.LENGTH))
-    y_true = tf.placeholder(tf.int32)
-    y_true = image_preprocess.conv_to_one_hot(y_true)
+def eda():
+    x, y = get_train_data()
+    for i in range(y.shape[0]):
+        print("DEBUG: Min X shape: {}".format(x[i].shape))
+        # print("DEBUG: First elem of y shape: {}".format(y[1].shape))
 
-    y_pred = dummy_model(x)
+def train_model():
+    x = tf.placeholder(tf.float32, shape=(config.LENGTH, config.BREADTH, config.NUM_CHANNELS))
+    y_true = tf.placeholder(tf.int32, shape=(config.NUM_RAGAS))
+
+    y_pred = repeated_forward_prop(x)
     # y_pred = forward_prop(x)
     print('DEBUG: y_true shape: {}'.format(y_true))
     print('DEBUG: y_pred shape: {}'.format(y_pred))
@@ -167,15 +164,15 @@ def train_model():
 
     with tf.Session() as sess:
         sess.run(init_op)
-        for i in range(10):
-            a, b = get_data()
-
-            for j in range(len(a)):
+        features, labels = get_train_data()
+        for i in range(labels.shape[0]):
+        
+            for j in range(config.EPOCHS):
                 # remove all examples with less than 2000 length
                 # if a[key].shape[1] < config.BREADTH:
                 #     continue
 
-                _, quant_loss = sess.run((train, num_loss), feed_dict={x: a[j][:, 0], y_true: b[j]})
+                _, quant_loss = sess.run((train, num_loss), feed_dict={x: features[i], y_true: labels[i]})
                 val_accuracy = 0
                 print(template.format(i, quant_loss, val_accuracy))
 
@@ -189,11 +186,6 @@ def train_model():
     # writer.flush()
 
 
-
-
-
-
-
 # x, y_true = get_data()
 if __name__ == "__main__":
-    train_model()
+    eda()
