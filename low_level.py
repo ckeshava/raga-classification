@@ -20,6 +20,8 @@
 import tensorflow as tf
 import numpy as np
 import os, glob
+import warnings
+warnings.filterwarnings('ignore')
 
 import image_preprocess
 import config
@@ -31,10 +33,10 @@ import config
 # to be modified
 def get_data(input_dir="input/"):
     # x = np.random.rand(config.LENGTH, config.BREADTH, config.NUM_CHANNELS)
-    y_true = np.random.rand(config.NUM_RAGAS, 1) 
+    # y_true = np.random.rand(config.NUM_RAGAS, 1) 
 
     x = image_preprocess.get_image(input_dir) 
-    # y_true = image_preprocess.get_label()
+    y_true = image_preprocess.get_label(input_dir)
     
 
     return x, y_true  
@@ -104,22 +106,38 @@ def cnn_model_fn(x):
     return tf.reshape(logits, [config.NUM_RAGAS, -1])
     # return logits
 
+def dummy_model(x):
+    w = tf.Variable(dtype=tf.float32, shape=(config.LENGTH, config.NUM_RAGAS), initial_value=tf.zeros(config.LENGTH, config.NUM_RAGAS))
+    return tf.matmul(x, w)
 
+def repeated_forward_prop(x):
+    
+    ans = tf.zeros(config.NUM_RAGAS)
+    print("DEBUG: x shape: {}".format(x.shape))
+    for i in range(2000):
+        temp = x[:, i]
+        temp = tf.reshape(temp, [-1, 129])
+        ans += forward_prop(temp)
+
+    # normalise the values of ans
+    return tf.nn.softmax(ans)
 
 def forward_prop(x):
     """ Vanilla Fully Connected Neural Network """
-    model = tf.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
+    # model = tf.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
     model = tf.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
     model = tf.layers.Dense(units=config.NUM_RAGAS, activation=None)
     return model(x)
 
 def train_model():
-    x = tf.placeholder(tf.float32, shape=(config.LENGTH, config.BREADTH, config.NUM_CHANNELS))
-    y_true = tf.placeholder(tf.float32, shape=(config.NUM_RAGAS, 1))
+    x = tf.placeholder(tf.float32, shape=(1, config.LENGTH))
+    y_true = tf.placeholder(tf.int32)
+    y_true = image_preprocess.conv_to_one_hot(y_true)
 
-    y_pred = cnn_model_fn(x)
+    y_pred = dummy_model(x)
     # y_pred = forward_prop(x)
-    print('hello')
+    print('DEBUG: y_true shape: {}'.format(y_true))
+    print('DEBUG: y_pred shape: {}'.format(y_pred))
 
     accuracy = tf.metrics.accuracy(labels=y_true, predictions=y_pred)
     loss = tf.losses.softmax_cross_entropy(onehot_labels=y_true, logits=y_pred)
@@ -143,14 +161,23 @@ def train_model():
     template = ('Epoch: {}\tLoss: {}\tAccuracy: {}\n')
 
     summary_writer = tf.summary.FileWriter('logs', graph=tf.get_default_graph())
-    for i in range(10):
-        a, b = get_data()
 
-        for key in a:
-            print(a[key].shape)
-            _, quant_loss = sess.run((train, num_loss), feed_dict={x: a[key], y_true: b})
-            val_accuracy = 0
-            print(template.format(i, quant_loss, val_accuracy))
+    init_op = tf.compat.v1.global_variables_initializer()
+    # tf.Session().run(init_op)
+
+    with tf.Session() as sess:
+        sess.run(init_op)
+        for i in range(10):
+            a, b = get_data()
+
+            for j in range(len(a)):
+                # remove all examples with less than 2000 length
+                # if a[key].shape[1] < config.BREADTH:
+                #     continue
+
+                _, quant_loss = sess.run((train, num_loss), feed_dict={x: a[j][:, 0], y_true: b[j]})
+                val_accuracy = 0
+                print(template.format(i, quant_loss, val_accuracy))
 
         # summary_writer.add_summary(summary, i)
 

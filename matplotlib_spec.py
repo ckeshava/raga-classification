@@ -31,7 +31,7 @@ def get_mono_wav(filename):
 def get_spectrogram(input_dir):
     """ Produces spectrogram for the audio files within input_dir """
     preprocess_input(input_dir)
-    spec = {}
+    spec = []
 
     for filename in glob.glob(os.path.join("input/", "*.wav")):
         _, samples = wavfile.read(filename)
@@ -42,7 +42,7 @@ def get_spectrogram(input_dir):
         plt.ylabel('Frequency')
         plt.savefig(filename[:-4] + ".png")
 
-        spec[filename] = Pxx
+        spec.append(Pxx)
 
     return spec
 
