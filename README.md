@@ -5,12 +5,9 @@ This is a Carnatic Music Raga classification project.
 ## How to run
 
 ## Datasets
+CompMusic varnams dataset with 28 recordings (mp3 format)
 
-## Structure
-- Models are created using `tf.Estimator` API.
-- Data must be organised into the `tf.Dataset` API format.
-- tensorflow with eager execution is used.
-- Every music file is split into the below specified duration and a spectrogram for every clip is produced by `spectrogram.get_spectrogram()`.
+- Every music file is split into the below specified duration and a spectrogram for every clip is produced by `librosa.display.specshow()`.
 
 - A CNN takes the spectrogram as input and is used to produce logits as output. These logits are accumulated or summed up for all the short clips of a single music file. Finally `softmax()` is applied to this accrued logits values. This is the output of forward propagation of the neural network.
 
@@ -20,13 +17,14 @@ This is a Carnatic Music Raga classification project.
 
 ## Hyper-parameters 
 - Architecture of CNN: 
+[Architecture of the network](/results/arch.png)
 
 
 - Duration of every clip:
 - Overlap between segments used in `scipy.signal.stft`
-- Learning Rate:
-- Number of Epochs during training:
-- Optimiser:
+- Learning Rate: 0.01
+- Number of Epochs during training: 5 per training sample
+- Optimiser: Gradient Descent Optimiser
 
 ## Apprehensions
 - The idea of accruing the answer by looking at short music clips is not compatible with the existence of `gamakas` or inter-frequency swaying of the voice. Moreover, the short clips might not be representative of the raga. Another possible alternative is to use an LSTM instead of taking the overall statistic by repeatedly applying the CNN.
