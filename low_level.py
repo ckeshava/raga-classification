@@ -35,6 +35,8 @@ def get_train_data(input_dir=config.INPUT_DIR):
     x, y_temp = scipy_read_images.get_data() 
     y_true = np.zeros([y_temp.shape[0], config.NUM_RAGAS])
 
+    print('DEBUG entered train data')
+
     for i in range(y_temp.shape[0]):
         temp = np.zeros(config.NUM_RAGAS)
         temp[int(y_temp[i])] = 1
@@ -86,19 +88,19 @@ def cnn_model_fn(x):
     pool2_flat = tf.reshape(pool2, [-1, config.HIDDEN_UNITS])
     print(template.format(pool2_flat, pool2_flat.shape))
 
-    d = tf.layers.dense(inputs=pool2_flat, units=config.HIDDEN_UNITS, activation=tf.nn.relu)
+    d = tf.compat.v1.layers.dense(inputs=pool2_flat, units=config.HIDDEN_UNITS, activation=tf.nn.relu)
     print(template.format(d, d.shape))
 
-    dense1 = tf.layers.dense(inputs=d, units=config.HIDDEN_UNITS, activation=tf.nn.relu)
+    dense1 = tf.compat.v1.layers.dense(inputs=d, units=config.HIDDEN_UNITS, activation=tf.nn.relu)
     print(template.format(dense1, dense1.shape))
 
 
     # Logits Layer
-    logits = tf.layers.dense(inputs=dense1, units=config.NUM_RAGAS, activation=None)
+    logits = tf.compat.v1.layers.dense(inputs=dense1, units=config.NUM_RAGAS, activation=None)
     print(template.format(logits, logits.shape))
 
 
-    return tf.reshape(logits, [config.NUM_RAGAS, -1])
+    return tf.reshape(logits, [-1, config.NUM_RAGAS])
     # return logits
 
 
@@ -116,42 +118,43 @@ def repeated_forward_prop(x):
 
 def forward_prop(x):
     """ Vanilla Fully Connected Neural Network """
-    # model = tf.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
-    model = tf.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
-    model = tf.layers.Dense(units=config.NUM_RAGAS, activation=None)
+    # model = tf.compat.v1.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
+    x = tf.reshape(x, [-1, config.LENGTH * config.BREADTH * config.NUM_CHANNELS])
+    model = tf.compat.v1.layers.Dense(units=config.UNITS, activation=tf.nn.relu)
+    model = tf.compat.v1.layers.Dense(units=config.NUM_RAGAS, activation=None)
     return model(x)
 
 def eda():
     x, y = get_train_data()
     for i in range(y.shape[0]):
         print("DEBUG: Min X shape: {}".format(x[i].shape))
-        # print("DEBUG: First elem of y shape: {}".format(y[1].shape))
+        print("DEBUG: First elem of y shape: {}".format(y[1].shape))
 
 def train_model():
-    x = tf.placeholder(tf.float32, shape=(config.LENGTH, config.BREADTH, config.NUM_CHANNELS))
-    y_true = tf.placeholder(tf.int32, shape=(config.NUM_RAGAS))
+    x = tf.compat.v1.placeholder(tf.float32, shape=(config.LENGTH, config.BREADTH, config.NUM_CHANNELS))
+    y_true = tf.compat.v1.placeholder(tf.int32, shape=(1, config.NUM_RAGAS))
 
-    y_pred = repeated_forward_prop(x)
+    y_pred = cnn_model_fn(x)
     # y_pred = forward_prop(x)
     print('DEBUG: y_true shape: {}'.format(y_true))
     print('DEBUG: y_pred shape: {}'.format(y_pred))
 
-    accuracy = tf.metrics.accuracy(labels=y_true, predictions=y_pred)
     loss = tf.losses.softmax_cross_entropy(onehot_labels=y_true, logits=y_pred)
     num_loss = tf.math.reduce_sum(loss)
 
     optimizer = tf.train.GradientDescentOptimizer(0.01)
 
     train = optimizer.minimize(loss)
+    accu = tf.compat.v1.metrics.accuracy(labels=tf.squeeze(y_true), predictions=tf.squeeze(y_pred))
 
-    init = tf.global_variables_initializer()
+    init_op = tf.initialize_all_variables()
 
-    sess = tf.Session()
-    sess.run(init)
+
 
     # tensorboard setup
-    tf.summary.scalar('cross entropy loss', loss)
-    tf.summary.scalar('Accuracy', accuracy)
+
+    tf.summary.scalar('cross entropy loss', tf.reshape(loss, []))
+    # tf.summary.scalar('Accuracy', tf.reshape(accu, []))
 
     merged_summary_op = tf.summary.merge_all()
 
@@ -159,33 +162,34 @@ def train_model():
 
     summary_writer = tf.summary.FileWriter('logs', graph=tf.get_default_graph())
 
-    init_op = tf.compat.v1.global_variables_initializer()
-    # tf.Session().run(init_op)
 
     with tf.Session() as sess:
         sess.run(init_op)
+        sess.run(tf.local_variables_initializer())
         features, labels = get_train_data()
         for i in range(labels.shape[0]):
-        
+            loss = 0
             for j in range(config.EPOCHS):
-                # remove all examples with less than 2000 length
-                # if a[key].shape[1] < config.BREADTH:
-                #     continue
 
-                _, quant_loss = sess.run((train, num_loss), feed_dict={x: features[i], y_true: labels[i]})
-                val_accuracy = 0
-                print(template.format(i, quant_loss, val_accuracy))
+                # _, quant_loss, val_accuracy = sess.run((train, num_loss, accuracy), feed_dict={x: features[i], y_true: labels[i]})
 
-        # summary_writer.add_summary(summary, i)
+                _, quant_loss, val_accuracy, summary = sess.run((train, num_loss, accu, merged_summary_op), feed_dict={x: features[i][:, :config.BREADTH, :], 
+                                                        y_true: np.reshape(labels[i, :], [-1, config.NUM_RAGAS])})
+                # acc += val_accuracy
+                loss += quant_loss
+            print(template.format(i, loss/config.EPOCHS, val_accuracy[0]))
+
+        summary_writer.add_summary(summary, i)
 
     # testing code ??
 
     # Tensorboard functionality
-    # writer = tf.summary.FileWriter('.')
-    # writer.add_graph(tf.get_default_graph())
-    # writer.flush()
+    writer = tf.summary.FileWriter('.')
+    writer.add_graph(tf.get_default_graph())
+    writer.flush()
 
 
 # x, y_true = get_data()
 if __name__ == "__main__":
-    eda()
+    train_model()
+    # eda()
