@@ -11,3 +11,6 @@ printf "installed librosa"
 
 conda install -c conda-forge matplotlib
 printf "installed matplotlib"
+
+conda install -c menpo imageio
+printf "installed image_io"
