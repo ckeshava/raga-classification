@@ -13,5 +13,5 @@ INPUT_DIR = "/home/keshava/Desktop/work/ragas/carnatic_varnam_1.0/Audio/"
 EPOCHS = 5 # Number of iterations per data sample
 RAGAS = ["sahana", "kalyani", "begada", "abhogi", "mohanam", "saveri", "sri"]
 
-MP3_FILES = "/home/student/Desktop/iTuned - Carnatic Instrumental"
+MP3_FILES = "~/data"
 
