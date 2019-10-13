@@ -15,5 +15,5 @@ RAGAS = ["sahana", "kalyani", "begada", "abhogi", "mohanam", "saveri", "sri"]
 
 MP3_FILES = "~/data"
 BEGADA = "~/data/audio/begada"
-VARALI = "~/data/audio/varali"
+VARALI = "/home/chenna/data/audio/varali"
 
