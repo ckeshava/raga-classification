@@ -1,8 +1,11 @@
 This is a Carnatic Music Raga classification project.
+The img_result contains fft of 10 recordings each in begada and varali.
 
 # Issues
-- glob is a fucking bitch
-- numpy.fft seems to be working fine. install gcp api and do scp quickly
+1. Cluster the images using t-SNE and observe the utility of this endeavor 
+2. Perform k-means clustering using the fft feature directly and report the result
+after 100 iterations, averagd over 10 times.
+
 
 ## Install Dependencies
 
