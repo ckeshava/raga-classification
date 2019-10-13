@@ -1,5 +1,9 @@
 This is a Carnatic Music Raga classification project.
 
+# Issues
+- glob is a fucking bitch
+- numpy.fft seems to be working fine. install gcp api and do scp quickly
+
 ## Install Dependencies
 
 ## How to run

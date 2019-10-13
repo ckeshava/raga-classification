@@ -14,4 +14,6 @@ EPOCHS = 5 # Number of iterations per data sample
 RAGAS = ["sahana", "kalyani", "begada", "abhogi", "mohanam", "saveri", "sri"]
 
 MP3_FILES = "~/data"
+BEGADA = "~/data/audio/begada"
+VARALI = "~/data/audio/varali"
 
