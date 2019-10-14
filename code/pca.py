@@ -62,12 +62,13 @@ def plot_pca():
     # PCA
     nsamples, x, y, z = X.shape
     new_X = X.reshape((nsamples, x * y * z))
+    print(new_X.shape)
     pca = PCA(n_components=2)
     pca.fit_transform(new_X)
 
-    plt.plot(new_X[0:10, 0], new_X[0:10, 1], 'r', new_X[10:, 0], new_X[10:, 1], 'g')
+    plt.scatter(new_X[0:10, 0], new_X[0:10, 1], 'r', new_X[10:, 0], new_X[10:, 1], 'g')
     #plt.show()
 
-    plt.savefig('pca.png')
+    plt.savefig('result_pca.png')
 
 plot_pca()
