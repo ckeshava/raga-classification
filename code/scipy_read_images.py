@@ -1,18 +1,35 @@
 import imageio
 import glob, os
 import numpy as np
+import matplotlib.pyplot as plt
 
-import labelling
+
 import config
 
-def get_data():
+def get_img_data(raga):
+    """ 
+    Returns the images of all the fft's of a raga
+    Args:
+    raga: config.IMG_<raga_name>
 
-	filelist=glob.glob(os.path.join(config.INPUT_DIR, "*.png"))
-	sorted(filelist)
-	features = {}
-	labels=labelling.find_raga(config.INPUT_DIR)
+    Returns:
+    nd array of features
+    """
+    filelist=glob.glob(os.path.join(raga, "*.png"))
+    sorted(filelist)
+    print(len(filelist))
+    features = []
 
-	for i, filename in enumerate(filelist):
-		features[i]=imageio.imread(filename)
+    for i, filename in enumerate(filelist):
+        features.append(imageio.imread(filename))
+	
+    return features
 
-	return features, labels
+def test_get_img_data():
+    begada_fft = get_img_data(config.IMG_BEGADA)
+
+    print(len(begada_fft))
+    for i in range(len(begada_fft)):
+        print(begada_fft[i].shape)
+
+#test_get_img_data()

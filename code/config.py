@@ -17,3 +17,5 @@ MP3_FILES = "~/data"
 BEGADA = "/home/chenna/data/audio/begada"
 VARALI = "/home/chenna/data/audio/varali"
 
+IMG_BEGADA = "/home/chenna/raga-classification/img_data/begada"
+IMG_VARALI = "/home/chenna/raga-classification/img_data/varali"
