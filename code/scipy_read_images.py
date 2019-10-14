@@ -16,11 +16,9 @@ def get_img_data(raga):
     nd array of features
     """
     filelist=glob.glob(os.path.join(raga, "*.png"))
-    sorted(filelist)
-    print(len(filelist))
     features = []
 
-    for i, filename in enumerate(filelist):
+    for filename in filelist:
         features.append(imageio.imread(filename))
 	
     return features
@@ -28,7 +26,6 @@ def get_img_data(raga):
 def test_get_img_data():
     begada_fft = get_img_data(config.IMG_BEGADA)
 
-    print(len(begada_fft))
     for i in range(len(begada_fft)):
         print(begada_fft[i].shape)
 
