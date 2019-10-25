@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 import scipy_read_images as sri
 import config
@@ -13,7 +14,6 @@ def get_largest_dimensions(X):
     Returns:
     (x, y, z) dimensions
     """
-
     x = y = z = 0
     
     for i in X:
@@ -55,20 +55,37 @@ def plot_pca():
     # TO CHANGE MULTIPLE RAGAS
     X = sri.get_img_data(config.IMG_BEGADA)
     X += sri.get_img_data(config.IMG_VARALI)
-
-    x, y, z = get_largest_dimensions(X)
-    X = blow_up_matrix(X, x, y, z)
     
+    x, y, z = get_largest_dimensions(X)
+
+    X = blow_up_matrix(X, x, y, z)
+
+
+ 
     # PCA
     nsamples, x, y, z = X.shape
     new_X = X.reshape((nsamples, x * y * z))
-    print(new_X.shape)
+    
+    # standardise the data
+    new_X = StandardScaler().fit_transform(new_X)
     pca = PCA(n_components=2)
-    pca.fit_transform(new_X)
+    principal_components = pca.fit_transform(new_X)
+    
+    # append raga name to every data point
 
-    plt.scatter(new_X[0:10, 0], new_X[0:10, 1], 'r', new_X[10:, 0], new_X[10:, 1], 'g')
+
+    pc_raga = np.zeros((principal_components.shape[0], principal_components.shape[1] + 1))
+
+    pc_raga[:, [0, 1]] = principal_components
+    pc_raga[0:10, 2] = 0 # begada
+    pc_raga[10:, 2] = 1 # varali
+    #plt.scatter(principal_components[0:10, 0], principal_components[0:10, 1], 'b', principal_components[10:, 0], principal_components[10:, 1], 'r')
     #plt.show()
 
+    color = ["red"] * 10
+    blue = ["blue"] * 10
+    color += blue
+    plt.scatter(pc_raga[:, 0], pc_raga[:, 1], color=color)
     plt.savefig('result_pca.png')
 
 plot_pca()

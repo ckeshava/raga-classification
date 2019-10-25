@@ -2,7 +2,7 @@ import imageio
 import glob, os
 import numpy as np
 import matplotlib.pyplot as plt
-
+import visvis
 
 import config
 
@@ -19,7 +19,9 @@ def get_img_data(raga):
     features = []
 
     for filename in filelist:
-        features.append(imageio.imread(filename))
+        im = imageio.imread(filename)
+        features.append(im)
+        #visvis.imshow(im)
 	
     return features
 
@@ -29,4 +31,4 @@ def test_get_img_data():
     for i in range(len(begada_fft)):
         print(begada_fft[i].shape)
 
-#test_get_img_data()
+#get_img_data("../img_data/begada")
