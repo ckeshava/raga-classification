@@ -20,4 +20,4 @@ VARALI = "/home/chenna/data/audio/varali"
 IMG_BEGADA = "../img_data/begada"
 IMG_VARALI = "../img_data/varali"
 
-JSON_FILES = "../carnatic"
+JSON_FILES = "../../carnatic"

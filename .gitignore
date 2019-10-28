@@ -1,3 +1,6 @@
 logs
 *.wav
 *.pyc
+*.json
+*.txt
+*.mp3

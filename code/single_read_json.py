@@ -10,7 +10,7 @@ import config
 
 
 def write_image(wav_file):
-	wav_file = os.path.join(config.JSON_FILES, wav_file)
+	#wav_file = os.path.join(config.JSON_FILES, wav_file)
 	# get the raga name from the corresponding json file
 	metadata_file = wav_file.replace('.mp3', '.json')
 	with open(metadata_file, 'r') as f:

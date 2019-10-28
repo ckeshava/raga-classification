@@ -1,4 +1,4 @@
-command="find ~/Desktop/raga-classification -name "*.mp3""
+command="find ../../carnatic -name "*.mp3""
 my_array=$(eval $command)
 
 IFS=$'\n'      # Change IFS to new line
