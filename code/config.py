@@ -1,1 +1,1 @@
-JSON_FILES = "../../carnatic"
+JSON_FILES = "../carnatic"
