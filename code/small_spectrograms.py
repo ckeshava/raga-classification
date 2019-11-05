@@ -39,8 +39,8 @@ def prepare(y, wav_file, all_ragas, sr=44100):
     clips = []
 
     # clipping with segments having 0.5 seconds difference in time
-    for i in range(0, len(y) - 2 * sr, sr):
-        clips.append(y[i: i + 3 * sr])
+    for i in range(0, len(y) - (config.CLIP_DURATION - 1) * sr, config.SKIP_DURATION * sr):
+        clips.append(y[i: i + config.CLIP_DURATION * sr])
 
     # find the json file for correct naming
     metadata_file = wav_file.replace('.mp3', '.json')
@@ -56,7 +56,7 @@ def prepare(y, wav_file, all_ragas, sr=44100):
 
         for i, y in enumerate(clips):        
             # discard smaller segments (the end parts)
-            if len(y) < 3 * sr:
+            if len(y) < config.CLIP_DURATION * sr:
                 continue
 
             # plt.subplot(4, 2, 2)
@@ -71,7 +71,7 @@ def prepare(y, wav_file, all_ragas, sr=44100):
             plt.pcolormesh(times, frequencies, spectrogram)
             plt.imshow(spectrogram)
             plt.yscale('log')
-            plt.xlim(0, 3)
+            plt.xlim(0, config.CLIP_DURATION)
             plt.ylabel('Frequency [Hz]')
             plt.xlabel('Time [sec]')
             # filename is a bithc
@@ -81,8 +81,7 @@ def prepare(y, wav_file, all_ragas, sr=44100):
                 id = str(all_ragas[raga])
             plt.savefig(id + "_" + str(datetime.now()) + ".png")
             # plt.show()
-
-        print("Completed processing file: {}".format(wav_file))
+            print("Finished {}/{} files".format(i, len(y)))
 
 
 
@@ -93,6 +92,9 @@ assert len(audio_files) > 0, "No Audio Files"
 all_ragas = get_all_ragas()
 print("DEBUG")
 print(all_ragas)
-for f in audio_files:
+for i, f in enumerate(audio_files):
     y, sr = librosa.load(f, sr=44100)
     prepare(y, f, all_ragas, config.SAMPLE_FREQUENCY)
+    print("="*30)
+    print("\n\nCompleted processing file: {}/{}\n\n".format(i, len(audio_files)))
+    print("="*30)
