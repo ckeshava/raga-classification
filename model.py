@@ -17,9 +17,8 @@ from sklearn.preprocessing import LabelEncoder
 from keras.utils.vis_utils import plot_model
 
 
-NUM_RAGAS = 3
-RAGAS = ["thodi", "kalyani", "begada"]
-
+RAGAS = ["thodi", "kalyani", "begada", "bhairavi", "mohana", "sankarabharana"]
+NUM_RAGAS = len(RAGAS)
 
 data = []
 labels = []
@@ -28,12 +27,12 @@ labels = []
 for raga in RAGAS:
     inp_files = glob.glob(os.path.join(raga, "*.png"))
     temp = [raga] * len(inp_files)
+    print("Raga: {} \t Number of Input files: {}".format(raga, len(inp_files)))
     labels += temp
 
     for f in inp_files:
         img = load_img(f)  
         x = img_to_array(img)  
-        x = x.reshape((1,) + x.shape)  
         data.append(x)
         # np.append(data, x, axis=-1)
 
@@ -82,7 +81,7 @@ def baseline_model():
 
 # model = baseline_model()
 
-estimator = KerasClassifier(build_fn=baseline_model, epochs=200, batch_size=5, verbose=2)
+estimator = KerasClassifier(build_fn=baseline_model, epochs=20, batch_size=5, verbose=2)
 kfold = KFold(n_splits=10, shuffle=True)
 results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)
 print("Baseline: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))

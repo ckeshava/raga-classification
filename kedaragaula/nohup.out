@@ -1,0 +1,272 @@
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+Finished 0/22 files
+Finished 1/22 files
+Finished 2/22 files
+Finished 3/22 files
+Finished 4/22 files
+Finished 5/22 files
+Finished 6/22 files
+Finished 7/22 files
+Finished 8/22 files
+Finished 9/22 files
+Finished 10/22 files
+Finished 11/22 files
+Finished 12/22 files
+Finished 13/22 files
+Finished 14/22 files
+Finished 15/22 files
+Finished 16/22 files
+Finished 17/22 files
+Finished 18/22 files
+Finished 19/22 files
+Finished 20/22 files
+Finished 21/22 files
+==================================================
+completed 04 - Kopametula - Kedara Gowla - Rupakam.mp3
+==================================================
+Finished 0/76 files
+Finished 1/76 files
+Finished 2/76 files
+Finished 3/76 files
+Finished 4/76 files
+Finished 5/76 files
+Finished 6/76 files
+Finished 7/76 files
+Finished 8/76 files
+Finished 9/76 files
+Finished 10/76 files
+Finished 11/76 files
+Finished 12/76 files
+Finished 13/76 files
+Finished 14/76 files
+Finished 15/76 files
+Finished 16/76 files
+Finished 17/76 files
+Finished 18/76 files
+Finished 19/76 files
+Finished 20/76 files
+Finished 21/76 files
+Finished 22/76 files
+Finished 23/76 files
+Finished 24/76 files
+Finished 25/76 files
+Finished 26/76 files
+Finished 27/76 files
+Finished 28/76 files
+Finished 29/76 files
+Finished 30/76 files
+Finished 31/76 files
+Finished 32/76 files
+Finished 33/76 files
+Finished 34/76 files
+Finished 35/76 files
+Finished 36/76 files
+Finished 37/76 files
+Finished 38/76 files
+Finished 39/76 files
+Finished 40/76 files
+Finished 41/76 files
+Finished 42/76 files
+Finished 43/76 files
+Finished 44/76 files
+Finished 45/76 files
+Finished 46/76 files
+Finished 47/76 files
+Finished 48/76 files
+Finished 49/76 files
+Finished 50/76 files
+Finished 51/76 files
+Finished 52/76 files
+Finished 53/76 files
+Finished 54/76 files
+Finished 55/76 files
+Finished 56/76 files
+Finished 57/76 files
+Finished 58/76 files
+Finished 59/76 files
+Finished 60/76 files
+Finished 61/76 files
+Finished 62/76 files
+Finished 63/76 files
+Finished 64/76 files
+Finished 65/76 files
+Finished 66/76 files
+Finished 67/76 files
+Finished 68/76 files
+Finished 69/76 files
+Finished 70/76 files
+Finished 71/76 files
+Finished 72/76 files
+Finished 73/76 files
+Finished 74/76 files
+Finished 75/76 files
+==================================================
+completed 01 - Bhamaro - Kedaragowla - Trisra Triputa.mp3
+==================================================
+Finished 0/110 files
+Finished 1/110 files
+Finished 2/110 files
+Finished 3/110 files
+Finished 4/110 files
+Finished 5/110 files
+Finished 6/110 files
+Finished 7/110 files
+Finished 8/110 files
+Finished 9/110 files
+Finished 10/110 files
+Finished 11/110 files
+Finished 12/110 files
+Finished 13/110 files
+Finished 14/110 files
+Finished 15/110 files
+Finished 16/110 files
+Finished 17/110 files
+Finished 18/110 files
+Finished 19/110 files
+Finished 20/110 files
+Finished 21/110 files
+Finished 22/110 files
+Finished 23/110 files
+Finished 24/110 files
+Finished 25/110 files
+Finished 26/110 files
+Finished 27/110 files
+Finished 28/110 files
+Finished 29/110 files
+Finished 30/110 files
+Finished 31/110 files
+Finished 32/110 files
+Finished 33/110 files
+Finished 34/110 files
+Finished 35/110 files
+Finished 36/110 files
+Finished 37/110 files
+Finished 38/110 files
+Finished 39/110 files
+Finished 40/110 files
+Finished 41/110 files
+Finished 42/110 files
+Finished 43/110 files
+Finished 44/110 files
+Finished 45/110 files
+Finished 46/110 files
+Finished 47/110 files
+Finished 48/110 files
+Finished 49/110 files
+Finished 50/110 files
+Finished 51/110 files
+Finished 52/110 files
+Finished 53/110 files
+Finished 54/110 files
+Finished 55/110 files
+Finished 56/110 files
+Finished 57/110 files
+Finished 58/110 files
+Finished 59/110 files
+Finished 60/110 files
+Finished 61/110 files
+Finished 62/110 files
+Finished 63/110 files
+Finished 64/110 files
+Finished 65/110 files
+Finished 66/110 files
+Finished 67/110 files
+Finished 68/110 files
+Finished 69/110 files
+Finished 70/110 files
+Finished 71/110 files
+Finished 72/110 files
+Finished 73/110 files
+Finished 74/110 files
+Finished 75/110 files
+Finished 76/110 files
+Finished 77/110 files
+Finished 78/110 files
+Finished 79/110 files
+Finished 80/110 files
+Finished 81/110 files
+Finished 82/110 files
+Finished 83/110 files
+Finished 84/110 files
+Finished 85/110 files
+Finished 86/110 files
+Finished 87/110 files
+Finished 88/110 files
+Finished 89/110 files
+Finished 90/110 files
+Finished 91/110 files
+Finished 92/110 files
+Finished 93/110 files
+Finished 94/110 files
+Finished 95/110 files
+Finished 96/110 files
+Finished 97/110 files
+Finished 98/110 files
+Finished 99/110 files
+Finished 100/110 files
+Finished 101/110 files
+Finished 102/110 files
+Finished 103/110 files
+Finished 104/110 files
+Finished 105/110 files
+Finished 106/110 files
+Finished 107/110 files
+Finished 108/110 files
+Finished 109/110 files
+==================================================
+completed 01 - Ragam - Kedaragaula.mp3
+==================================================
+Finished 0/24 files
+Finished 1/24 files
+Finished 2/24 files
+Finished 3/24 files
+Finished 4/24 files
+Finished 5/24 files
+Finished 6/24 files
+Finished 7/24 files
+Finished 8/24 files
+Finished 9/24 files
+Finished 10/24 files
+Finished 11/24 files
+Finished 12/24 files
+Finished 13/24 files
+Finished 14/24 files
+Finished 15/24 files
+Finished 16/24 files
+Finished 17/24 files
+Finished 18/24 files
+Finished 19/24 files
+Finished 20/24 files
+Finished 21/24 files
+Finished 22/24 files
+Finished 23/24 files
+==================================================
+completed 01 - Sami Dayajuda(varnam) - Kedaragaula.mp3
+==================================================

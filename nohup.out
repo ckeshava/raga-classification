@@ -1,0 +1,286 @@
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_grad.py:1250: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-12-05 14:48:48.654429: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 AVX512F FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+
+User settings:
+
+   KMP_AFFINITY=granularity=fine,verbose,compact,1,0
+   KMP_BLOCKTIME=0
+   KMP_SETTINGS=1
+   OMP_NUM_THREADS=4
+
+Effective settings:
+
+   KMP_ABORT_DELAY=0
+   KMP_ADAPTIVE_LOCK_PROPS='1,1024'
+   KMP_ALIGN_ALLOC=64
+   KMP_ALL_THREADPRIVATE=128
+   KMP_ATOMIC_MODE=2
+   KMP_BLOCKTIME=0
+   KMP_CPUINFO_FILE: value is not defined
+   KMP_DETERMINISTIC_REDUCTION=false
+   KMP_DEVICE_THREAD_LIMIT=2147483647
+   KMP_DISP_HAND_THREAD=false
+   KMP_DISP_NUM_BUFFERS=7
+   KMP_DUPLICATE_LIB_OK=false
+   KMP_FORCE_REDUCTION: value is not defined
+   KMP_FOREIGN_THREADS_THREADPRIVATE=true
+   KMP_FORKJOIN_BARRIER='2,2'
+   KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
+   KMP_FORKJOIN_FRAMES=true
+   KMP_FORKJOIN_FRAMES_MODE=3
+   KMP_GTID_MODE=3
+   KMP_HANDLE_SIGNALS=false
+   KMP_HOT_TEAMS_MAX_LEVEL=1
+   KMP_HOT_TEAMS_MODE=0
+   KMP_INIT_AT_FORK=true
+   KMP_INIT_WAIT=2048
+   KMP_ITT_PREPARE_DELAY=0
+   KMP_LIBRARY=throughput
+   KMP_LOCK_KIND=queuing
+   KMP_MALLOC_POOL_INCR=1M
+   KMP_NEXT_WAIT=1024
+   KMP_NUM_LOCKS_IN_BLOCK=1
+   KMP_PLAIN_BARRIER='2,2'
+   KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
+   KMP_REDUCTION_BARRIER='1,1'
+   KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
+   KMP_SCHEDULE='static,balanced;guided,iterative'
+   KMP_SETTINGS=true
+   KMP_SPIN_BACKOFF_PARAMS='4096,100'
+   KMP_STACKOFFSET=64
+   KMP_STACKPAD=0
+   KMP_STACKSIZE=4M
+   KMP_STORAGE_MAP=false
+   KMP_TASKING=2
+   KMP_TASKLOOP_MIN_TASKS=0
+   KMP_TASK_STEALING_CONSTRAINT=1
+   KMP_TEAMS_THREAD_LIMIT=4
+   KMP_TOPOLOGY_METHOD=all
+   KMP_USER_LEVEL_MWAIT=false
+   KMP_VERSION=false
+   KMP_WARNINGS=true
+   OMP_AFFINITY_FORMAT='OMP: pid %P tid %T thread %n bound to OS proc set {%a}'
+   OMP_ALLOCATOR=omp_default_mem_alloc
+   OMP_CANCELLATION=false
+   OMP_DEFAULT_DEVICE=0
+   OMP_DISPLAY_AFFINITY=false
+   OMP_DISPLAY_ENV=false
+   OMP_DYNAMIC=false
+   OMP_MAX_ACTIVE_LEVELS=2147483647
+   OMP_MAX_TASK_PRIORITY=0
+   OMP_NESTED=false
+   OMP_NUM_THREADS='4'
+   OMP_PLACES: value is not defined
+   OMP_PROC_BIND='intel'
+   OMP_SCHEDULE='static'
+   OMP_STACKSIZE=4M
+   OMP_TARGET_OFFLOAD=DEFAULT
+   OMP_THREAD_LIMIT=2147483647
+   OMP_TOOL=enabled
+   OMP_TOOL_LIBRARIES: value is not defined
+   OMP_WAIT_POLICY=PASSIVE
+   KMP_AFFINITY='verbose,warnings,respect,granularity=fine,compact,1,0'
+
+2019-12-05 14:48:48.702960: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000170000 Hz
+2019-12-05 14:48:48.703274: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x555e3e836740 executing computations on platform Host. Devices:
+2019-12-05 14:48:48.703294: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-12-05 14:48:49.129576: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
+OMP: Info #156: KMP_AFFINITY: 4 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7958 thread 0 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7958 thread 1 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7962 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7963 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7961 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7960 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7965 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7966 thread 8 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7964 thread 6 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7959 thread 9 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7967 thread 10 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7968 thread 11 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7969 thread 12 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7957 thread 13 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7970 thread 14 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7972 thread 16 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7971 thread 15 bound to OS proc set 3
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_grad.py:1250: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-12-05 14:51:53.078289: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 AVX512F FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+
+User settings:
+
+   KMP_AFFINITY=granularity=fine,verbose,compact,1,0
+   KMP_BLOCKTIME=0
+   KMP_SETTINGS=1
+   OMP_NUM_THREADS=4
+
+Effective settings:
+
+   KMP_ABORT_DELAY=0
+   KMP_ADAPTIVE_LOCK_PROPS='1,1024'
+   KMP_ALIGN_ALLOC=64
+   KMP_ALL_THREADPRIVATE=128
+   KMP_ATOMIC_MODE=2
+   KMP_BLOCKTIME=0
+   KMP_CPUINFO_FILE: value is not defined
+   KMP_DETERMINISTIC_REDUCTION=false
+   KMP_DEVICE_THREAD_LIMIT=2147483647
+   KMP_DISP_HAND_THREAD=false
+   KMP_DISP_NUM_BUFFERS=7
+   KMP_DUPLICATE_LIB_OK=false
+   KMP_FORCE_REDUCTION: value is not defined
+   KMP_FOREIGN_THREADS_THREADPRIVATE=true
+   KMP_FORKJOIN_BARRIER='2,2'
+   KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
+   KMP_FORKJOIN_FRAMES=true
+   KMP_FORKJOIN_FRAMES_MODE=3
+   KMP_GTID_MODE=3
+   KMP_HANDLE_SIGNALS=false
+   KMP_HOT_TEAMS_MAX_LEVEL=1
+   KMP_HOT_TEAMS_MODE=0
+   KMP_INIT_AT_FORK=true
+   KMP_INIT_WAIT=2048
+   KMP_ITT_PREPARE_DELAY=0
+   KMP_LIBRARY=throughput
+   KMP_LOCK_KIND=queuing
+   KMP_MALLOC_POOL_INCR=1M
+   KMP_NEXT_WAIT=1024
+   KMP_NUM_LOCKS_IN_BLOCK=1
+   KMP_PLAIN_BARRIER='2,2'
+   KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
+   KMP_REDUCTION_BARRIER='1,1'
+   KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
+   KMP_SCHEDULE='static,balanced;guided,iterative'
+   KMP_SETTINGS=true
+   KMP_SPIN_BACKOFF_PARAMS='4096,100'
+   KMP_STACKOFFSET=64
+   KMP_STACKPAD=0
+   KMP_STACKSIZE=4M
+   KMP_STORAGE_MAP=false
+   KMP_TASKING=2
+   KMP_TASKLOOP_MIN_TASKS=0
+   KMP_TASK_STEALING_CONSTRAINT=1
+   KMP_TEAMS_THREAD_LIMIT=4
+   KMP_TOPOLOGY_METHOD=all
+   KMP_USER_LEVEL_MWAIT=false
+   KMP_VERSION=false
+   KMP_WARNINGS=true
+   OMP_AFFINITY_FORMAT='OMP: pid %P tid %T thread %n bound to OS proc set {%a}'
+   OMP_ALLOCATOR=omp_default_mem_alloc
+   OMP_CANCELLATION=false
+   OMP_DEFAULT_DEVICE=0
+   OMP_DISPLAY_AFFINITY=false
+   OMP_DISPLAY_ENV=false
+   OMP_DYNAMIC=false
+   OMP_MAX_ACTIVE_LEVELS=2147483647
+   OMP_MAX_TASK_PRIORITY=0
+   OMP_NESTED=false
+   OMP_NUM_THREADS='4'
+   OMP_PLACES: value is not defined
+   OMP_PROC_BIND='intel'
+   OMP_SCHEDULE='static'
+   OMP_STACKSIZE=4M
+   OMP_TARGET_OFFLOAD=DEFAULT
+   OMP_THREAD_LIMIT=2147483647
+   OMP_TOOL=enabled
+   OMP_TOOL_LIBRARIES: value is not defined
+   OMP_WAIT_POLICY=PASSIVE
+   KMP_AFFINITY='verbose,warnings,respect,granularity=fine,compact,1,0'
+
+2019-12-05 14:51:53.092096: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000170000 Hz
+2019-12-05 14:51:53.092531: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55559590f750 executing computations on platform Host. Devices:
+2019-12-05 14:51:53.092580: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-12-05 14:51:53.427427: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
+OMP: Info #156: KMP_AFFINITY: 4 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8041 thread 0 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8041 thread 1 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8044 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8045 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8046 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8042 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8049 thread 8 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8048 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8047 thread 6 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8040 thread 9 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8050 thread 10 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8052 thread 12 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8051 thread 11 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8043 thread 13 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8053 thread 14 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8054 thread 15 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8055 thread 16 bound to OS proc set 0
+Raga: thodi 	 Number of Input files: 390
+Raga: kalyani 	 Number of Input files: 97
+Raga: begada 	 Number of Input files: 254
+Raga: bhairavi 	 Number of Input files: 284
+Raga: mohana 	 Number of Input files: 50
+Raga: sankarabharana 	 Number of Input files: 252
+1327
+1327
+Epoch 1/20
+ - 174s - loss: 11.7578 - acc: 0.2705
+Epoch 2/20
+ - 172s - loss: 12.2384 - acc: 0.2404
+Epoch 3/20
+ - 176s - loss: 12.4598 - acc: 0.2270
