@@ -1,0 +1,24 @@
+/home/chenna/.local/lib/python2.7/site-packages/librosa/__init__.py:35: FutureWarning: You are using librosa with Python 2. Please note that librosa 0.7 will be the last version to support Python 2, after which it will require Python 3 or later.
+  FutureWarning)
+/home/chenna/.local/lib/python2.7/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+Traceback (most recent call last):
+  File "finish_single_file.py", line 52, in <module>
+    prepare(f)
+  File "finish_single_file.py", line 35, in prepare
+    plt.pcolormesh(times, frequencies, spectrogram)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 3282, in pcolormesh
+    ax = gca()
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 969, in gca
+    return gcf().gca(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 586, in gcf
+    return figure()
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 533, in figure
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backend_bases.py", line 161, in new_figure_manager
+    return cls.new_figure_manager_given_figure(num, fig)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backends/_backend_tk.py", line 1046, in new_figure_manager_given_figure
+    window = Tk.Tk(className="matplotlib")
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1823, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
