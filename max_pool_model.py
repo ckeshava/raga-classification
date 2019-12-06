@@ -14,7 +14,7 @@ from keras.utils import np_utils
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
 from sklearn.preprocessing import LabelEncoder
-
+from sklearn.model_selection import train_test_split
 from keras.utils.vis_utils import plot_model
 
 
@@ -38,16 +38,9 @@ for raga in RAGAS:
         data.append(x)
         # np.append(data, x, axis=-1)
 
-# print(labels)
 print(len(labels))
 print(len(data))
 
-# encode class values as integers
-#encoder = LabelEncoder()
-#encoder.fit(labels)
-#encoded_Y = encoder.transform(labels)
-# convert integers to dummy variables (i.e. one hot encoded)
-#dummy_y = np_utils.to_categorical(encoded_Y)
 labels = to_categorical(labels)
 
 
@@ -70,13 +63,18 @@ def baseline_model():
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
+
+    model.add(Conv2D(64, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
+
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     model.add(Dense(32))
     model.add(Activation('relu'))
 #    model.add(Dropout(0.5))
 
-#    model.add(Dense(32))
-#    model.add(Activation('relu'))
+    model.add(Dense(32))
+    model.add(Activation('relu'))
 #    model.add(Dropout(0.5))
 
     model.add(Dense(NUM_RAGAS))
@@ -92,7 +90,7 @@ def baseline_model():
 
 model = baseline_model()
 print(model.summary())
-history=model.fit(np.array(data), np.array(labels), validation_split=0.33, epochs=25, verbose=2)
+history=model.fit(np.array(data), np.array(labels), validation_split=0.33, epochs=250, verbose=2)
 
 model.save('cnn2.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
