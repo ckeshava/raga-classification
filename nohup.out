@@ -1,379 +1,333 @@
 Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
 Instructions for updating:
-Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_grad.py:1250: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-2019-12-05 14:48:48.654429: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 AVX512F FMA
+If using Keras pass *_constraint arguments to layers.
+2019-12-06 14:18:20.114035: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 14:18:20.125817: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 14:18:20.127476: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56476c25f990 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 14:18:20.127538: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 14:18:20.136742: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
-User settings:
+2019-12-06 14:19:06.312997: W tensorflow/core/common_runtime/bfc_allocator.cc:419] Allocator (mklcpu) ran out of memory trying to allocate 4.55GiB (rounded to 4887412736).  Current allocation summary follows.
+2019-12-06 14:19:06.313094: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (256): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313111: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313118: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (1024): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313125: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313131: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313137: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313144: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313153: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (32768): 	Total Chunks: 5, Chunks in use: 5. 172.0KiB allocated for chunks. 172.0KiB in use in bin. 172.0KiB client-requested in use in bin.
+2019-12-06 14:19:06.313160: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (65536): 	Total Chunks: 2, Chunks in use: 2. 144.0KiB allocated for chunks. 144.0KiB in use in bin. 144.0KiB client-requested in use in bin.
+2019-12-06 14:19:06.313174: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313180: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313187: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (524288): 	Total Chunks: 1, Chunks in use: 0. 708.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313213: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313219: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313225: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313231: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313236: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313242: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313249: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 112.50MiB allocated for chunks. 112.50MiB in use in bin. 112.50MiB client-requested in use in bin.
+2019-12-06 14:19:06.313255: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2019-12-06 14:19:06.313262: I tensorflow/core/common_runtime/bfc_allocator.cc:869] Bin (268435456): 	Total Chunks: 4, Chunks in use: 2. 15.09GiB allocated for chunks. 9.10GiB in use in bin. 9.10GiB client-requested in use in bin.
+2019-12-06 14:19:06.313268: I tensorflow/core/common_runtime/bfc_allocator.cc:885] Bin for 4.55GiB was 256.00MiB, Chunk State: 
+2019-12-06 14:19:06.313280: I tensorflow/core/common_runtime/bfc_allocator.cc:891]   Size: 2.54GiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 112.50MiB | Requested Size: 112.50MiB | in_use: 1 | bin_num: -1
+2019-12-06 14:19:06.313288: I tensorflow/core/common_runtime/bfc_allocator.cc:891]   Size: 3.45GiB | Requested Size: 36.0KiB | in_use: 0 | bin_num: 20, prev:   Size: 4.55GiB | Requested Size: 4.55GiB | in_use: 1 | bin_num: -1
+2019-12-06 14:19:06.313293: I tensorflow/core/common_runtime/bfc_allocator.cc:898] Next region of size 1048576
+2019-12-06 14:19:06.313301: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476ca6cf00 next 2 of size 36864
+2019-12-06 14:19:06.313307: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476ca75f00 next 3 of size 32768
+2019-12-06 14:19:06.313312: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476ca7df00 next 4 of size 73728
+2019-12-06 14:19:06.313317: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476ca8ff00 next 6 of size 73728
+2019-12-06 14:19:06.313330: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476caa1f00 next 8 of size 36864
+2019-12-06 14:19:06.313335: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476caaaf00 next 10 of size 36864
+2019-12-06 14:19:06.313340: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x56476cab3f00 next 11 of size 32768
+2019-12-06 14:19:06.313345: I tensorflow/core/common_runtime/bfc_allocator.cc:905] Free  at 0x56476cabbf00 next 18446744073709551615 of size 724992
+2019-12-06 14:19:06.313350: I tensorflow/core/common_runtime/bfc_allocator.cc:898] Next region of size 7730940928
+2019-12-06 14:19:06.313356: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x7fea57331040 next 5 of size 4887412736
+2019-12-06 14:19:06.313365: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x7feb7a831040 next 12 of size 117964800
+2019-12-06 14:19:06.313371: I tensorflow/core/common_runtime/bfc_allocator.cc:905] Free  at 0x7feb818b1040 next 18446744073709551615 of size 2725563392
+2019-12-06 14:19:06.313376: I tensorflow/core/common_runtime/bfc_allocator.cc:898] Next region of size 8589934592
+2019-12-06 14:19:06.313381: I tensorflow/core/common_runtime/bfc_allocator.cc:905] InUse at 0x7fec33fff040 next 7 of size 4887412736
+2019-12-06 14:19:06.313386: I tensorflow/core/common_runtime/bfc_allocator.cc:905] Free  at 0x7fed574ff040 next 18446744073709551615 of size 3702521856
+2019-12-06 14:19:06.313391: I tensorflow/core/common_runtime/bfc_allocator.cc:914]      Summary of in-use Chunks by size: 
+2019-12-06 14:19:06.313398: I tensorflow/core/common_runtime/bfc_allocator.cc:917] 2 Chunks of size 32768 totalling 64.0KiB
+2019-12-06 14:19:06.313404: I tensorflow/core/common_runtime/bfc_allocator.cc:917] 3 Chunks of size 36864 totalling 108.0KiB
+2019-12-06 14:19:06.313410: I tensorflow/core/common_runtime/bfc_allocator.cc:917] 2 Chunks of size 73728 totalling 144.0KiB
+2019-12-06 14:19:06.313416: I tensorflow/core/common_runtime/bfc_allocator.cc:917] 1 Chunks of size 117964800 totalling 112.50MiB
+2019-12-06 14:19:06.313421: I tensorflow/core/common_runtime/bfc_allocator.cc:917] 2 Chunks of size 4887412736 totalling 9.10GiB
+2019-12-06 14:19:06.313427: I tensorflow/core/common_runtime/bfc_allocator.cc:921] Sum Total of in-use chunks: 9.21GiB
+2019-12-06 14:19:06.313432: I tensorflow/core/common_runtime/bfc_allocator.cc:923] total_region_allocated_bytes_: 16321924096 memory_limit_: 54881517568 available bytes: 38559593472 curr_region_allocation_bytes_: 17179869184
+2019-12-06 14:19:06.313442: I tensorflow/core/common_runtime/bfc_allocator.cc:929] Stats: 
+Limit:                 54881517568
+InUse:                  9893113856
+MaxInUse:               9893113856
+NumAllocs:                      58
+MaxAllocSize:           4887412736
 
-   KMP_AFFINITY=granularity=fine,verbose,compact,1,0
-   KMP_BLOCKTIME=0
-   KMP_SETTINGS=1
-   OMP_NUM_THREADS=4
-
-Effective settings:
-
-   KMP_ABORT_DELAY=0
-   KMP_ADAPTIVE_LOCK_PROPS='1,1024'
-   KMP_ALIGN_ALLOC=64
-   KMP_ALL_THREADPRIVATE=128
-   KMP_ATOMIC_MODE=2
-   KMP_BLOCKTIME=0
-   KMP_CPUINFO_FILE: value is not defined
-   KMP_DETERMINISTIC_REDUCTION=false
-   KMP_DEVICE_THREAD_LIMIT=2147483647
-   KMP_DISP_HAND_THREAD=false
-   KMP_DISP_NUM_BUFFERS=7
-   KMP_DUPLICATE_LIB_OK=false
-   KMP_FORCE_REDUCTION: value is not defined
-   KMP_FOREIGN_THREADS_THREADPRIVATE=true
-   KMP_FORKJOIN_BARRIER='2,2'
-   KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
-   KMP_FORKJOIN_FRAMES=true
-   KMP_FORKJOIN_FRAMES_MODE=3
-   KMP_GTID_MODE=3
-   KMP_HANDLE_SIGNALS=false
-   KMP_HOT_TEAMS_MAX_LEVEL=1
-   KMP_HOT_TEAMS_MODE=0
-   KMP_INIT_AT_FORK=true
-   KMP_INIT_WAIT=2048
-   KMP_ITT_PREPARE_DELAY=0
-   KMP_LIBRARY=throughput
-   KMP_LOCK_KIND=queuing
-   KMP_MALLOC_POOL_INCR=1M
-   KMP_NEXT_WAIT=1024
-   KMP_NUM_LOCKS_IN_BLOCK=1
-   KMP_PLAIN_BARRIER='2,2'
-   KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
-   KMP_REDUCTION_BARRIER='1,1'
-   KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
-   KMP_SCHEDULE='static,balanced;guided,iterative'
-   KMP_SETTINGS=true
-   KMP_SPIN_BACKOFF_PARAMS='4096,100'
-   KMP_STACKOFFSET=64
-   KMP_STACKPAD=0
-   KMP_STACKSIZE=4M
-   KMP_STORAGE_MAP=false
-   KMP_TASKING=2
-   KMP_TASKLOOP_MIN_TASKS=0
-   KMP_TASK_STEALING_CONSTRAINT=1
-   KMP_TEAMS_THREAD_LIMIT=4
-   KMP_TOPOLOGY_METHOD=all
-   KMP_USER_LEVEL_MWAIT=false
-   KMP_VERSION=false
-   KMP_WARNINGS=true
-   OMP_AFFINITY_FORMAT='OMP: pid %P tid %T thread %n bound to OS proc set {%a}'
-   OMP_ALLOCATOR=omp_default_mem_alloc
-   OMP_CANCELLATION=false
-   OMP_DEFAULT_DEVICE=0
-   OMP_DISPLAY_AFFINITY=false
-   OMP_DISPLAY_ENV=false
-   OMP_DYNAMIC=false
-   OMP_MAX_ACTIVE_LEVELS=2147483647
-   OMP_MAX_TASK_PRIORITY=0
-   OMP_NESTED=false
-   OMP_NUM_THREADS='4'
-   OMP_PLACES: value is not defined
-   OMP_PROC_BIND='intel'
-   OMP_SCHEDULE='static'
-   OMP_STACKSIZE=4M
-   OMP_TARGET_OFFLOAD=DEFAULT
-   OMP_THREAD_LIMIT=2147483647
-   OMP_TOOL=enabled
-   OMP_TOOL_LIBRARIES: value is not defined
-   OMP_WAIT_POLICY=PASSIVE
-   KMP_AFFINITY='verbose,warnings,respect,granularity=fine,compact,1,0'
-
-2019-12-05 14:48:48.702960: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000170000 Hz
-2019-12-05 14:48:48.703274: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x555e3e836740 executing computations on platform Host. Devices:
-2019-12-05 14:48:48.703294: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2019-12-05 14:48:49.129576: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
-OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
-OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
-OMP: Info #156: KMP_AFFINITY: 4 available OS procs
-OMP: Info #157: KMP_AFFINITY: Uniform topology
-OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
-OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
-OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
-OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
-OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
-OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7958 thread 0 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7958 thread 1 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7962 thread 3 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7963 thread 4 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7961 thread 2 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7960 thread 5 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7965 thread 7 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7966 thread 8 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7964 thread 6 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7959 thread 9 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7967 thread 10 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7968 thread 11 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7969 thread 12 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7957 thread 13 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7970 thread 14 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7972 thread 16 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 7935 tid 7971 thread 15 bound to OS proc set 3
+2019-12-06 14:19:06.313449: W tensorflow/core/common_runtime/bfc_allocator.cc:424] *******************************________________*******************************______________________
+2019-12-06 14:19:06.313520: W tensorflow/core/framework/op_kernel.cc:1651] OP_REQUIRES failed at cwise_ops_common.cc:82 : Resource exhausted: OOM when allocating tensor with shape[19091456,64] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator mklcpu
 Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
 Instructions for updating:
-Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
-
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_grad.py:1250: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use tf.where in 2.0, which has the same broadcast rule as np.where
-2019-12-05 14:51:53.078289: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 AVX512F FMA
+If using Keras pass *_constraint arguments to layers.
+2019-12-06 14:25:25.923967: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 14:25:26.488418: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 14:25:26.489049: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55a356761c40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 14:25:26.489142: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 14:25:26.516383: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
-User settings:
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
 
-   KMP_AFFINITY=granularity=fine,verbose,compact,1,0
-   KMP_BLOCKTIME=0
-   KMP_SETTINGS=1
-   OMP_NUM_THREADS=4
+2019-12-06 14:31:04.717079: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 14:31:04.777654: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 14:31:04.800470: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560c39b7f360 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 14:31:04.800585: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 14:31:04.816252: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
-Effective settings:
-
-   KMP_ABORT_DELAY=0
-   KMP_ADAPTIVE_LOCK_PROPS='1,1024'
-   KMP_ALIGN_ALLOC=64
-   KMP_ALL_THREADPRIVATE=128
-   KMP_ATOMIC_MODE=2
-   KMP_BLOCKTIME=0
-   KMP_CPUINFO_FILE: value is not defined
-   KMP_DETERMINISTIC_REDUCTION=false
-   KMP_DEVICE_THREAD_LIMIT=2147483647
-   KMP_DISP_HAND_THREAD=false
-   KMP_DISP_NUM_BUFFERS=7
-   KMP_DUPLICATE_LIB_OK=false
-   KMP_FORCE_REDUCTION: value is not defined
-   KMP_FOREIGN_THREADS_THREADPRIVATE=true
-   KMP_FORKJOIN_BARRIER='2,2'
-   KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
-   KMP_FORKJOIN_FRAMES=true
-   KMP_FORKJOIN_FRAMES_MODE=3
-   KMP_GTID_MODE=3
-   KMP_HANDLE_SIGNALS=false
-   KMP_HOT_TEAMS_MAX_LEVEL=1
-   KMP_HOT_TEAMS_MODE=0
-   KMP_INIT_AT_FORK=true
-   KMP_INIT_WAIT=2048
-   KMP_ITT_PREPARE_DELAY=0
-   KMP_LIBRARY=throughput
-   KMP_LOCK_KIND=queuing
-   KMP_MALLOC_POOL_INCR=1M
-   KMP_NEXT_WAIT=1024
-   KMP_NUM_LOCKS_IN_BLOCK=1
-   KMP_PLAIN_BARRIER='2,2'
-   KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
-   KMP_REDUCTION_BARRIER='1,1'
-   KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
-   KMP_SCHEDULE='static,balanced;guided,iterative'
-   KMP_SETTINGS=true
-   KMP_SPIN_BACKOFF_PARAMS='4096,100'
-   KMP_STACKOFFSET=64
-   KMP_STACKPAD=0
-   KMP_STACKSIZE=4M
-   KMP_STORAGE_MAP=false
-   KMP_TASKING=2
-   KMP_TASKLOOP_MIN_TASKS=0
-   KMP_TASK_STEALING_CONSTRAINT=1
-   KMP_TEAMS_THREAD_LIMIT=4
-   KMP_TOPOLOGY_METHOD=all
-   KMP_USER_LEVEL_MWAIT=false
-   KMP_VERSION=false
-   KMP_WARNINGS=true
-   OMP_AFFINITY_FORMAT='OMP: pid %P tid %T thread %n bound to OS proc set {%a}'
-   OMP_ALLOCATOR=omp_default_mem_alloc
-   OMP_CANCELLATION=false
-   OMP_DEFAULT_DEVICE=0
-   OMP_DISPLAY_AFFINITY=false
-   OMP_DISPLAY_ENV=false
-   OMP_DYNAMIC=false
-   OMP_MAX_ACTIVE_LEVELS=2147483647
-   OMP_MAX_TASK_PRIORITY=0
-   OMP_NESTED=false
-   OMP_NUM_THREADS='4'
-   OMP_PLACES: value is not defined
-   OMP_PROC_BIND='intel'
-   OMP_SCHEDULE='static'
-   OMP_STACKSIZE=4M
-   OMP_TARGET_OFFLOAD=DEFAULT
-   OMP_THREAD_LIMIT=2147483647
-   OMP_TOOL=enabled
-   OMP_TOOL_LIBRARIES: value is not defined
-   OMP_WAIT_POLICY=PASSIVE
-   KMP_AFFINITY='verbose,warnings,respect,granularity=fine,compact,1,0'
-
-2019-12-05 14:51:53.092096: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000170000 Hz
-2019-12-05 14:51:53.092531: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55559590f750 executing computations on platform Host. Devices:
-2019-12-05 14:51:53.092580: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2019-12-05 14:51:53.427427: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
-OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
-OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
-OMP: Info #156: KMP_AFFINITY: 4 available OS procs
-OMP: Info #157: KMP_AFFINITY: Uniform topology
-OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
-OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
-OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
-OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
-OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
-OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8041 thread 0 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8041 thread 1 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8044 thread 2 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8045 thread 3 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8046 thread 4 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8042 thread 5 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8049 thread 8 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8048 thread 7 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8047 thread 6 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8040 thread 9 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8050 thread 10 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8052 thread 12 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8051 thread 11 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8043 thread 13 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8053 thread 14 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8054 thread 15 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8017 tid 8055 thread 16 bound to OS proc set 0
 Raga: thodi 	 Number of Input files: 390
-Raga: kalyani 	 Number of Input files: 97
-Raga: begada 	 Number of Input files: 254
-Raga: bhairavi 	 Number of Input files: 284
-Raga: mohana 	 Number of Input files: 50
-Raga: sankarabharana 	 Number of Input files: 252
-1327
-1327
-Epoch 1/20
- - 174s - loss: 11.7578 - acc: 0.2705
-Epoch 2/20
- - 172s - loss: 12.2384 - acc: 0.2404
-Epoch 3/20
- - 176s - loss: 12.4598 - acc: 0.2270
-/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
-  warnings.warn('PySoundFile failed. Trying audioread instead.')
-/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
-  self.apply_aspect()
-/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
-Invalid limit will be ignored.
-  self.axes.set_ylim((ymin, ymax), auto=None)
-Finished 0/87 files
-Finished 1/87 files
-Finished 2/87 files
-Finished 3/87 files
-Finished 4/87 files
-Finished 5/87 files
-Finished 6/87 files
-Finished 7/87 files
-Finished 8/87 files
-Finished 9/87 files
-Finished 10/87 files
-Finished 11/87 files
-Finished 12/87 files
-Finished 13/87 files
-Finished 14/87 files
-Finished 15/87 files
-Finished 16/87 files
-Finished 17/87 files
-Finished 18/87 files
-Finished 19/87 files
-Finished 20/87 files
-Finished 21/87 files
-Finished 22/87 files
-Finished 23/87 files
-Finished 24/87 files
-Finished 25/87 files
-Finished 26/87 files
-Finished 27/87 files
-Finished 28/87 files
-Finished 29/87 files
-Finished 30/87 files
-Finished 31/87 files
-Finished 32/87 files
-Finished 33/87 files
-Finished 34/87 files
-Finished 35/87 files
-Finished 36/87 files
-Finished 37/87 files
-Finished 38/87 files
-Finished 39/87 files
-Finished 40/87 files
-Finished 41/87 files
-Finished 42/87 files
-Finished 43/87 files
-Finished 44/87 files
-Finished 45/87 files
-Finished 46/87 files
-Finished 47/87 files
-Finished 48/87 files
-Finished 49/87 files
-Finished 50/87 files
-Finished 51/87 files
-Finished 52/87 files
-Finished 53/87 files
-Finished 54/87 files
-Finished 55/87 files
-Finished 56/87 files
-Finished 57/87 files
-Finished 58/87 files
-Finished 59/87 files
-Finished 60/87 files
-Finished 61/87 files
-Finished 62/87 files
-Finished 63/87 files
-Finished 64/87 files
-Finished 65/87 files
-Finished 66/87 files
-Finished 67/87 files
-Finished 68/87 files
-Finished 69/87 files
-Finished 70/87 files
-Finished 71/87 files
-Finished 72/87 files
-Finished 73/87 files
-Finished 74/87 files
-Finished 75/87 files
-Finished 76/87 files
-Finished 77/87 files
-Finished 78/87 files
-Finished 79/87 files
-Finished 80/87 files
-Finished 81/87 files
-Finished 82/87 files
-Finished 83/87 files
-Finished 84/87 files
-Finished 85/87 files
+Raga: begada 	 Number of Input files: 615
+Raga: bhairavi 	 Number of Input files: 508
+Raga: mohana 	 Number of Input files: 436
+Raga: sankarabharana 	 Number of Input files: 722
+2671
+2671
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
+_________________________________________________________________
+activation_1 (Activation)    (None, 478, 638, 32)      0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 239, 319, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 237, 317, 32)      9248      
+_________________________________________________________________
+activation_2 (Activation)    (None, 237, 317, 32)      0         
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 118, 158, 32)      0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 116, 156, 32)      9248      
+_________________________________________________________________
+activation_3 (Activation)    (None, 116, 156, 32)      0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 579072)            0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                18530336  
+_________________________________________________________________
+activation_4 (Activation)    (None, 32)                0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 5)                 165       
+_________________________________________________________________
+activation_5 (Activation)    (None, 5)                 0         
+=================================================================
+Total params: 18,549,893
+Trainable params: 18,549,893
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 2136 samples, validate on 535 samples
+Epoch 1/200
+ - 174s - loss: 610.0642 - accuracy: 0.2762 - val_loss: 1.6570 - val_accuracy: 0.0000e+00
+Epoch 2/200
+ - 138s - loss: 1.5953 - accuracy: 0.2879 - val_loss: 1.7171 - val_accuracy: 0.0000e+00
+Epoch 3/200
+ - 135s - loss: 37.9516 - accuracy: 0.2814 - val_loss: 1.7720 - val_accuracy: 0.0000e+00
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2019-12-06 14:40:45.268671: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 14:40:45.278998: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 14:40:45.279692: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5592de6db990 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 14:40:45.279733: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 14:40:45.280333: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Raga: thodi 	 Number of Input files: 490
+Raga: begada 	 Number of Input files: 615
+Raga: bhairavi 	 Number of Input files: 567
+Raga: mohana 	 Number of Input files: 436
+Raga: sankarabharana 	 Number of Input files: 735
+2843
+2843
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
+_________________________________________________________________
+activation_1 (Activation)    (None, 478, 638, 32)      0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 239, 319, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 237, 317, 32)      9248      
+_________________________________________________________________
+activation_2 (Activation)    (None, 237, 317, 32)      0         
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 118, 158, 32)      0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 116, 156, 32)      9248      
+_________________________________________________________________
+activation_3 (Activation)    (None, 116, 156, 32)      0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 579072)            0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                18530336  
+_________________________________________________________________
+activation_4 (Activation)    (None, 32)                0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 5)                 165       
+_________________________________________________________________
+activation_5 (Activation)    (None, 5)                 0         
+=================================================================
+Total params: 18,549,893
+Trainable params: 18,549,893
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 2274 samples, validate on 569 samples
+Epoch 1/200
+ - 146s - loss: 49.9127 - accuracy: 0.2383 - val_loss: 1.6705 - val_accuracy: 0.0000e+00
+Epoch 2/200
+ - 145s - loss: 5.9819 - accuracy: 0.2617 - val_loss: 1.7254 - val_accuracy: 0.0000e+00
+Epoch 3/200
+ - 142s - loss: 1.7123 - accuracy: 0.2489 - val_loss: 1.7951 - val_accuracy: 0.0000e+00
+Epoch 4/200
+ - 142s - loss: 1.5774 - accuracy: 0.2590 - val_loss: 1.8609 - val_accuracy: 0.0000e+00
+Epoch 5/200
+ - 148s - loss: 1.5699 - accuracy: 0.2704 - val_loss: 1.9238 - val_accuracy: 0.0000e+00
+Epoch 6/200
+ - 145s - loss: 1.5635 - accuracy: 0.2704 - val_loss: 1.9855 - val_accuracy: 0.0000e+00
+Epoch 7/200
+ - 142s - loss: 1.5585 - accuracy: 0.2704 - val_loss: 2.0452 - val_accuracy: 0.0000e+00
+Epoch 8/200
+ - 143s - loss: 1.5542 - accuracy: 0.2704 - val_loss: 2.1021 - val_accuracy: 0.0000e+00
+Epoch 9/200
+ - 144s - loss: 1.5507 - accuracy: 0.2704 - val_loss: 2.1509 - val_accuracy: 0.0000e+00
+Epoch 10/200
+ - 145s - loss: 1.5484 - accuracy: 0.2704 - val_loss: 2.1960 - val_accuracy: 0.0000e+00
+Epoch 11/200
+ - 143s - loss: 1.5463 - accuracy: 0.2704 - val_loss: 2.2421 - val_accuracy: 0.0000e+00
+Epoch 12/200
+ - 144s - loss: 1.5446 - accuracy: 0.2704 - val_loss: 2.2827 - val_accuracy: 0.0000e+00
+Epoch 13/200
+ - 146s - loss: 1.5433 - accuracy: 0.2704 - val_loss: 2.3177 - val_accuracy: 0.0000e+00
+Epoch 14/200
+ - 145s - loss: 1.5423 - accuracy: 0.2704 - val_loss: 2.3483 - val_accuracy: 0.0000e+00
+Epoch 15/200
+ - 144s - loss: 1.5415 - accuracy: 0.2704 - val_loss: 2.3825 - val_accuracy: 0.0000e+00
+Epoch 16/200
+ - 141s - loss: 1.5408 - accuracy: 0.2704 - val_loss: 2.4052 - val_accuracy: 0.0000e+00
+Epoch 17/200
+ - 141s - loss: 1.5404 - accuracy: 0.2704 - val_loss: 2.4246 - val_accuracy: 0.0000e+00
+Epoch 18/200
+ - 143s - loss: 1.5400 - accuracy: 0.2704 - val_loss: 2.4439 - val_accuracy: 0.0000e+00
+Epoch 19/200
+ - 141s - loss: 1.5397 - accuracy: 0.2704 - val_loss: 2.4644 - val_accuracy: 0.0000e+00
+Epoch 20/200
+ - 140s - loss: 1.5395 - accuracy: 0.2704 - val_loss: 2.4835 - val_accuracy: 0.0000e+00
+Epoch 21/200
+ - 154s - loss: 1.5393 - accuracy: 0.2704 - val_loss: 2.4938 - val_accuracy: 0.0000e+00
+Epoch 22/200
+ - 144s - loss: 1.5392 - accuracy: 0.2704 - val_loss: 2.5066 - val_accuracy: 0.0000e+00
+Epoch 23/200
+ - 142s - loss: 1.5390 - accuracy: 0.2704 - val_loss: 2.5223 - val_accuracy: 0.0000e+00
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2019-12-06 15:40:39.013107: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 15:40:39.024182: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 15:40:39.024937: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55960f2c5530 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 15:40:39.024978: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 15:40:39.025703: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2019-12-06 15:42:02.321580: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-06 15:42:02.331036: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-06 15:42:02.331847: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x565133c15bc0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-06 15:42:02.331887: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-06 15:42:02.332357: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Raga: thodi 	 Number of Input files: 556
+Raga: begada 	 Number of Input files: 615
+Raga: bhairavi 	 Number of Input files: 567
+Raga: mohana 	 Number of Input files: 436
+Raga: sankarabharana 	 Number of Input files: 751
+2925
+2925
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
+_________________________________________________________________
+activation_1 (Activation)    (None, 478, 638, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 476, 636, 32)      9248      
+_________________________________________________________________
+activation_2 (Activation)    (None, 476, 636, 32)      0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 474, 634, 32)      9248      
+_________________________________________________________________
+activation_3 (Activation)    (None, 474, 634, 32)      0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 472, 632, 32)      9248      
+_________________________________________________________________
+activation_4 (Activation)    (None, 472, 632, 32)      0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 9545728)           0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                305463328 
+_________________________________________________________________
+activation_5 (Activation)    (None, 32)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 5)                 165       
+_________________________________________________________________
+activation_6 (Activation)    (None, 5)                 0         
+=================================================================
+Total params: 305,492,133
+Trainable params: 305,492,133
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 2340 samples, validate on 585 samples
+Epoch 1/50
+ - 736s - loss: 2425.2735 - accuracy: 0.2436 - val_loss: 3.5926 - val_accuracy: 0.0000e+00
+Epoch 2/50
+ - 739s - loss: 26.4767 - accuracy: 0.2953 - val_loss: 2.5806 - val_accuracy: 0.0068
+Epoch 3/50
+ - 736s - loss: 15.2562 - accuracy: 0.2897 - val_loss: 1.8093 - val_accuracy: 0.0000e+00
+Epoch 4/50
+ - 731s - loss: 1.5733 - accuracy: 0.2397 - val_loss: 1.9314 - val_accuracy: 0.0000e+00
+Epoch 5/50
+ - 731s - loss: 1.5608 - accuracy: 0.2517 - val_loss: 2.0781 - val_accuracy: 0.0000e+00
+Epoch 6/50
+ - 735s - loss: 1.5501 - accuracy: 0.2628 - val_loss: 2.2230 - val_accuracy: 0.0000e+00
+Epoch 7/50
+ - 731s - loss: 1.5437 - accuracy: 0.2628 - val_loss: 2.3491 - val_accuracy: 0.0000e+00
