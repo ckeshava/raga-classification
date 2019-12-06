@@ -284,3 +284,96 @@ Epoch 2/20
  - 172s - loss: 12.2384 - acc: 0.2404
 Epoch 3/20
  - 176s - loss: 12.4598 - acc: 0.2270
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+Finished 0/87 files
+Finished 1/87 files
+Finished 2/87 files
+Finished 3/87 files
+Finished 4/87 files
+Finished 5/87 files
+Finished 6/87 files
+Finished 7/87 files
+Finished 8/87 files
+Finished 9/87 files
+Finished 10/87 files
+Finished 11/87 files
+Finished 12/87 files
+Finished 13/87 files
+Finished 14/87 files
+Finished 15/87 files
+Finished 16/87 files
+Finished 17/87 files
+Finished 18/87 files
+Finished 19/87 files
+Finished 20/87 files
+Finished 21/87 files
+Finished 22/87 files
+Finished 23/87 files
+Finished 24/87 files
+Finished 25/87 files
+Finished 26/87 files
+Finished 27/87 files
+Finished 28/87 files
+Finished 29/87 files
+Finished 30/87 files
+Finished 31/87 files
+Finished 32/87 files
+Finished 33/87 files
+Finished 34/87 files
+Finished 35/87 files
+Finished 36/87 files
+Finished 37/87 files
+Finished 38/87 files
+Finished 39/87 files
+Finished 40/87 files
+Finished 41/87 files
+Finished 42/87 files
+Finished 43/87 files
+Finished 44/87 files
+Finished 45/87 files
+Finished 46/87 files
+Finished 47/87 files
+Finished 48/87 files
+Finished 49/87 files
+Finished 50/87 files
+Finished 51/87 files
+Finished 52/87 files
+Finished 53/87 files
+Finished 54/87 files
+Finished 55/87 files
+Finished 56/87 files
+Finished 57/87 files
+Finished 58/87 files
+Finished 59/87 files
+Finished 60/87 files
+Finished 61/87 files
+Finished 62/87 files
+Finished 63/87 files
+Finished 64/87 files
+Finished 65/87 files
+Finished 66/87 files
+Finished 67/87 files
+Finished 68/87 files
+Finished 69/87 files
+Finished 70/87 files
+Finished 71/87 files
+Finished 72/87 files
+Finished 73/87 files
+Finished 74/87 files
+Finished 75/87 files
+Finished 76/87 files
+Finished 77/87 files
+Finished 78/87 files
+Finished 79/87 files
+Finished 80/87 files
+Finished 81/87 files
+Finished 82/87 files
+Finished 83/87 files
+Finished 84/87 files
+Finished 85/87 files
