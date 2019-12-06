@@ -717,4 +717,124 @@ Finished 189/262 files
 Finished 190/262 files
 Finished 191/262 files
 Finished 192/262 files
-Finished 193/262 files
+Finished 193/262 files/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+
+Finished 194/262 files
+Finished 195/262 files
+Finished 196/262 files
+Finished 197/262 files
+Finished 198/262 files
+Finished 199/262 files
+Finished 200/262 files
+Finished 201/262 files
+Finished 202/262 files
+Finished 203/262 files
+Finished 204/262 files
+Finished 205/262 files
+Finished 206/262 files
+Finished 207/262 files
+Finished 208/262 files
+Finished 209/262 files
+Finished 210/262 files
+Finished 211/262 files
+Finished 212/262 files
+Finished 213/262 files
+Finished 214/262 files
+Finished 215/262 files
+Finished 216/262 files
+Finished 217/262 files
+Finished 218/262 files
+Finished 219/262 files
+Finished 220/262 files
+Finished 221/262 files
+Finished 222/262 files
+Finished 223/262 files
+Finished 224/262 files
+Finished 225/262 files
+Finished 226/262 files
+Finished 227/262 files
+Finished 228/262 files
+Finished 229/262 files
+Finished 230/262 files
+Finished 231/262 files
+Finished 232/262 files
+Finished 233/262 files
+Finished 234/262 files
+Finished 235/262 files
+Finished 236/262 files
+Finished 237/262 files
+Finished 238/262 files
+Finished 239/262 files
+Finished 240/262 files
+Finished 241/262 files
+Finished 242/262 files
+Finished 243/262 files
+Finished 244/262 files
+Finished 245/262 files
+Finished 246/262 files
+Finished 247/262 files
+Finished 248/262 files
+Finished 249/262 files
+Finished 250/262 files
+Finished 251/262 files
+Finished 252/262 files
+Finished 253/262 files
+Finished 254/262 files
+Finished 255/262 files
+Finished 256/262 files
+Finished 257/262 files
+Finished 258/262 files
+Finished 259/262 files
+Finished 260/262 files
+Finished 261/262 files
+==================================================
+completed 04 - Sankarabharanam.mp3
+==================================================
