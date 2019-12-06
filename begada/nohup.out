@@ -361,4 +361,315 @@ Finished 72/238 files
 Finished 73/238 files
 Finished 74/238 files
 Finished 75/238 files
-Finished 76/238 files
+Finished 76/238 files/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+
+Finished 77/238 files
+Finished 78/238 files
+Finished 79/238 files
+Finished 80/238 files
+Finished 81/238 files
+Finished 82/238 files
+Finished 83/238 files
+Finished 84/238 files
+Finished 85/238 files
+Finished 86/238 files
+Finished 87/238 files
+Finished 88/238 files
+Finished 89/238 files
+Finished 90/238 files
+Finished 91/238 files
+Finished 92/238 files
+Finished 93/238 files
+Finished 94/238 files
+Finished 95/238 files
+Finished 96/238 files
+Finished 97/238 files
+Finished 98/238 files
+Finished 99/238 files
+Finished 100/238 files
+Finished 101/238 files
+Finished 102/238 files
+Finished 103/238 files
+Finished 104/238 files
+Finished 105/238 files
+Finished 106/238 files
+Finished 107/238 files
+Finished 108/238 files
+Finished 109/238 files
+Finished 110/238 files
+Finished 111/238 files
+Finished 112/238 files
+Finished 113/238 files
+Finished 114/238 files
+Finished 115/238 files
+Finished 116/238 files
+Finished 117/238 files
+Finished 118/238 files
+Finished 119/238 files
+Finished 120/238 files
+Finished 121/238 files
+Finished 122/238 files
+Finished 123/238 files
+Finished 124/238 files
+Finished 125/238 files
+Finished 126/238 files
+Finished 127/238 files
+Finished 128/238 files
+Finished 129/238 files
+Finished 130/238 files
+Finished 131/238 files
+Finished 132/238 files
+Finished 133/238 files
+Finished 134/238 files
+Finished 135/238 files
+Finished 136/238 files
+Finished 137/238 files
+Finished 138/238 files
+Finished 139/238 files
+Finished 140/238 files
+Finished 141/238 files
+Finished 142/238 files
+Finished 143/238 files
+Finished 144/238 files
+Finished 145/238 files
+Finished 146/238 files
+Finished 147/238 files
+Finished 148/238 files
+Finished 149/238 files
+Finished 150/238 files
+Finished 151/238 files
+Finished 152/238 files
+Finished 153/238 files
+Finished 154/238 files
+Finished 155/238 files
+Finished 156/238 files
+Finished 157/238 files
+Finished 158/238 files
+Finished 159/238 files
+Finished 160/238 files
+Finished 161/238 files
+Finished 162/238 files
+Finished 163/238 files
+Finished 164/238 files
+Finished 165/238 files
+Finished 166/238 files
+Finished 167/238 files
+Finished 168/238 files
+Finished 169/238 files
+Finished 170/238 files
+Finished 171/238 files
+Finished 172/238 files
+Finished 173/238 files
+Finished 174/238 files
+Finished 175/238 files
+Finished 176/238 files
+Finished 177/238 files
+Finished 178/238 files
+Finished 179/238 files
+Finished 180/238 files
+Finished 181/238 files
+Finished 182/238 files
+Finished 183/238 files
+Finished 184/238 files
+Finished 185/238 files
+Finished 186/238 files
+Finished 187/238 files
+Finished 188/238 files
+Finished 189/238 files
+Finished 190/238 files
+Finished 191/238 files
+Finished 192/238 files
+Finished 193/238 files
+Finished 194/238 files
+Finished 195/238 files
+Finished 196/238 files
+Finished 197/238 files
+Finished 198/238 files
+Finished 199/238 files
+Finished 200/238 files
+Finished 201/238 files
+Finished 202/238 files
+Finished 203/238 files
+Finished 204/238 files
+Finished 205/238 files
+Finished 206/238 files
+Finished 207/238 files
+Finished 208/238 files
+Finished 209/238 files
+Finished 210/238 files
+Finished 211/238 files
+Finished 212/238 files
+Finished 213/238 files
+Finished 214/238 files
+Finished 215/238 files
+Finished 216/238 files
+Finished 217/238 files
+Finished 218/238 files
+Finished 219/238 files
+Finished 220/238 files
+Finished 221/238 files
+Finished 222/238 files
+Finished 223/238 files
+Finished 224/238 files
+Finished 225/238 files
+Finished 226/238 files
+Finished 227/238 files
+Finished 228/238 files
+Finished 229/238 files
+Finished 230/238 files
+Finished 231/238 files
+Finished 232/238 files
+Finished 233/238 files
+Finished 234/238 files
+Finished 235/238 files
+Finished 236/238 files
+Finished 237/238 files
+==================================================
+completed 1a - RTP-Begada-Ragam.mp3
+==================================================
+Finished 0/32 files
+Finished 1/32 files
+Finished 2/32 files
+Finished 3/32 files
+Finished 4/32 files
+Finished 5/32 files
+Finished 6/32 files
+Finished 7/32 files
+Finished 8/32 files
+Finished 9/32 files
+Finished 10/32 files
+Finished 11/32 files
+Finished 12/32 files
+Finished 13/32 files
+Finished 14/32 files
+Finished 15/32 files
+Finished 16/32 files
+Finished 17/32 files
+Finished 18/32 files
+Finished 19/32 files
+Finished 20/32 files
+Finished 21/32 files
+Finished 22/32 files
+Finished 23/32 files
+Finished 24/32 files
+Finished 25/32 files
+Finished 26/32 files
+Finished 27/32 files
+Finished 28/32 files
+Finished 29/32 files
+Finished 30/32 files
+==================================================
+completed 01 - Dayanidhe (varnam) - Begada.mp3
+==================================================
+Finished 0/69 files
+Finished 1/69 files
+Finished 2/69 files
+Finished 3/69 files
+Finished 4/69 files
+Finished 5/69 files
+Finished 6/69 files
+Finished 7/69 files
+Finished 8/69 files
+Finished 9/69 files
+Finished 10/69 files
+Finished 11/69 files
+Finished 12/69 files
+Finished 13/69 files
+Finished 14/69 files
+Finished 15/69 files
+Finished 16/69 files
+Finished 17/69 files
+Finished 18/69 files
+Finished 19/69 files
+Finished 20/69 files
+Finished 21/69 files
+Finished 22/69 files
+Finished 23/69 files
+Finished 24/69 files
+Finished 25/69 files
+Finished 26/69 files
+Finished 27/69 files
+Finished 28/69 files
+Finished 29/69 files
+Finished 30/69 files
+Finished 31/69 files
+Finished 32/69 files
+Finished 33/69 files
+Finished 34/69 files
+Finished 35/69 files
+Finished 36/69 files
+Finished 37/69 files
+Finished 38/69 files
+Finished 39/69 files
+Finished 40/69 files
+Finished 41/69 files
+Finished 42/69 files
+Finished 43/69 files
+Finished 44/69 files
+Finished 45/69 files
+Finished 46/69 files
+Finished 47/69 files
+Finished 48/69 files
+Finished 49/69 files
+Finished 50/69 files
+Finished 51/69 files
+Finished 52/69 files
+Finished 53/69 files
+Finished 54/69 files
+Finished 55/69 files
+Finished 56/69 files
+Finished 57/69 files
+Finished 58/69 files
+Finished 59/69 files
+Finished 60/69 files
+Finished 61/69 files
+Finished 62/69 files
+Finished 63/69 files
+Finished 64/69 files
+Finished 65/69 files
+Finished 66/69 files
+Finished 67/69 files
+==================================================
+completed 03 - Sankari Neeva - Begada.mp3
+==================================================
