@@ -46,10 +46,4 @@ def prepare(wav_file, sr=44100):
         pass
 
     # clipping with segments having 0.5 seconds difference in time
-audio_files = glob.glob('*.mp3')
-
-for f in audio_files:
-    prepare(f)
-    print("="*50)
-    print("completed {}".format(f))
-    print("="*50)
+prepare(sys.argv[1])
