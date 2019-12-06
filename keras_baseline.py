@@ -18,7 +18,7 @@ from sklearn.preprocessing import LabelEncoder
 from keras.utils.vis_utils import plot_model
 
 
-RAGAS = ["thodi", "begada", "bhairavi", "mohana", "sankarabharana"]
+RAGAS = ["kalyani", "pantuvarali", "kedaragaula", "thodi", "begada", "bhairavi", "mohana", "sankarabharana"]
 NUM_RAGAS = len(RAGAS)
 
 data = []
@@ -55,19 +55,20 @@ def baseline_model():
     model = Sequential()
     model.add(Conv2D(32, (3, 3), input_shape=(480, 640, 3)))
     model.add(Activation('relu'))
-#    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
     model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
-#    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
     model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
-#    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
 
     model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     model.add(Dense(32))
@@ -82,7 +83,7 @@ def baseline_model():
     model.add(Activation('softmax'))
 
     model.compile(loss='categorical_crossentropy',
-                  optimizer='rmsprop',
+                  optimizer=sgd(),
                   metrics=['accuracy'])
 
     # print(model.summary())
@@ -93,7 +94,7 @@ model = baseline_model()
 print(model.summary())
 history=model.fit(np.array(data), np.array(labels), validation_split=0.20, epochs=50, verbose=2)
 
-model.save('cnn1.h5')
+model.save('cnn2.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
 #kfold = KFold(n_splits=10, shuffle=True)
 #results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)

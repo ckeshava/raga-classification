@@ -1,0 +1,5 @@
+python3 finish_single_file.py "01 - Sambho mahadeva - Pantuvarali .mp3"
+python3 finish_single_file.py "04 - Raghuvara - Pantuvarali.mp3"
+python3 finish_single_file.py "03. rAmanAtham bhajEham - pantuvarALi - Adi.mp3"
+python3 finish_single_file.py "04 - Ramanadham - Pantuvarali.mp3"
+python3 finish_single_file.py "03 -Sarasaksha - Pantuvarali.mp3"

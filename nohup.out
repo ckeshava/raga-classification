@@ -331,3 +331,4 @@ Epoch 6/50
  - 735s - loss: 1.5501 - accuracy: 0.2628 - val_loss: 2.2230 - val_accuracy: 0.0000e+00
 Epoch 7/50
  - 731s - loss: 1.5437 - accuracy: 0.2628 - val_loss: 2.3491 - val_accuracy: 0.0000e+00
+Using TensorFlow backend.
