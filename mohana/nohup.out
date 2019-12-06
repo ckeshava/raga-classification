@@ -368,4 +368,119 @@ Finished 49/131 files
 Finished 50/131 files
 Finished 51/131 files
 Finished 52/131 files
-Finished 53/131 files
+Finished 53/131 files/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+/home/chenna/.local/lib/python3.5/site-packages/librosa/core/audio.py:146: UserWarning: PySoundFile failed. Trying audioread instead.
+  warnings.warn('PySoundFile failed. Trying audioread instead.')
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/image.py:857: UserWarning: Attempted to set non-positive top ylim on a log-scaled axis.
+Invalid limit will be ignored.
+  self.axes.set_ylim((ymin, ymax), auto=None)
+/home/chenna/.local/lib/python3.5/site-packages/matplotlib/axes/_base.py:2575: UserWarning: aspect is not supported for Axes with xscale=linear, yscale=log
+  self.apply_aspect()
+
+Finished 54/131 files
+Finished 55/131 files
+Finished 56/131 files
+Finished 57/131 files
+Finished 58/131 files
+Finished 59/131 files
+Finished 60/131 files
+Finished 61/131 files
+Finished 62/131 files
+Finished 63/131 files
+Finished 64/131 files
+Finished 65/131 files
+Finished 66/131 files
+Finished 67/131 files
+Finished 68/131 files
+Finished 69/131 files
+Finished 70/131 files
+Finished 71/131 files
+Finished 72/131 files
+Finished 73/131 files
+Finished 74/131 files
+Finished 75/131 files
+Finished 76/131 files
+Finished 77/131 files
+Finished 78/131 files
+Finished 79/131 files
+Finished 80/131 files
+Finished 81/131 files
+Finished 82/131 files
+Finished 83/131 files
+Finished 84/131 files
+Finished 85/131 files
+Finished 86/131 files
+Finished 87/131 files
+Finished 88/131 files
+Finished 89/131 files
+Finished 90/131 files
+Finished 91/131 files
+Finished 92/131 files
+Finished 93/131 files
+Finished 94/131 files
+Finished 95/131 files
+Finished 96/131 files
+Finished 97/131 files
+Finished 98/131 files
+Finished 99/131 files
+Finished 100/131 files
+Finished 101/131 files
+Finished 102/131 files
+Finished 103/131 files
+Finished 104/131 files
+Finished 105/131 files
+Finished 106/131 files
+Finished 107/131 files
+Finished 108/131 files
+Finished 109/131 files
+Finished 110/131 files
+Finished 111/131 files
+Finished 112/131 files
+Finished 113/131 files
+Finished 114/131 files
+Finished 115/131 files
+Finished 116/131 files
+Finished 117/131 files
+Finished 118/131 files
+Finished 119/131 files
+Finished 120/131 files
+Finished 121/131 files
+Finished 122/131 files
+Finished 123/131 files
+Finished 124/131 files
+Finished 125/131 files
+Finished 126/131 files
+Finished 127/131 files
+Finished 128/131 files
+Finished 129/131 files
+Finished 130/131 files
+==================================================
+completed 02 - Nannu paalimpa - Mohanam.mp3
+==================================================
