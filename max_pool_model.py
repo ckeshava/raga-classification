@@ -1,3 +1,4 @@
+import pickle
 from keras.utils import to_categorical
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import matplotlib.pyplot as plt
@@ -41,7 +42,11 @@ for raga in RAGAS:
 print(len(labels))
 print(len(data))
 
-labels = to_categorical(labels)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.25, random_state=42)
+
+y_train = to_categorical(y_train)
+y_test = to_categorical(y_test)
+
 
 
 def baseline_model():
@@ -61,21 +66,21 @@ def baseline_model():
 
     model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(4, 4)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
 
 
-    model.add(Conv2D(64, (3, 3)))
-    model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(4, 4)))
+    #model.add(Conv2D(64, (3, 3)))
+    #model.add(Activation('relu'))
+    #model.add(MaxPooling2D(pool_size=(2, 2)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     model.add(Dense(32))
     model.add(Activation('relu'))
-#    model.add(Dropout(0.5))
+    model.add(Dropout(0.5))
 
     model.add(Dense(32))
     model.add(Activation('relu'))
-#    model.add(Dropout(0.5))
+    model.add(Dropout(0.5))
 
     model.add(Dense(NUM_RAGAS))
     model.add(Activation('softmax'))
@@ -90,9 +95,14 @@ def baseline_model():
 
 model = baseline_model()
 print(model.summary())
-history=model.fit(np.array(data), np.array(labels), validation_split=0.33, epochs=250, verbose=2)
+HISTORY = []
+for i in range(20):
+    history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=10, verbose=2)
+    score = model.evaluate(np.array(X_test), np.array(y_test))
+    print(score)
+    HISTORY.append(history)
 
-model.save('cnn2.h5')
+model.save('cnn3.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
 #kfold = KFold(n_splits=10, shuffle=True)
 #results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)
@@ -100,9 +110,9 @@ model.save('cnn2.h5')
 
 
 # save history to a file
-f = open("history", "w")
-f.write(history)
-f.close()
+with open('./trainHistoryDict_maxpool_dropout', 'wb') as file_pi:
+    pickle.dump(HISTORY, file_pi)
+
 
 #print(history.history.keys())
 # summarize history for accuracy
