@@ -1,3 +1,4 @@
+from datetime import datetime
 import pickle
 from keras.utils import to_categorical
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
@@ -55,16 +56,16 @@ def baseline_model():
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
-    model.add(Conv2D(32, (3, 3)))
+    model.add(Conv2D(64, (3, 3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
-    model.add(Conv2D(32, (3, 3)))
+    model.add(Conv2D(128, (3, 3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
 
-    model.add(Conv2D(32, (3, 3)))
+    model.add(Conv2D(128, (3, 3)))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
@@ -76,11 +77,11 @@ def baseline_model():
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     model.add(Dense(32))
     model.add(Activation('relu'))
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.2))
 
-    model.add(Dense(32))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
+#    model.add(Dense(32))
+#    model.add(Activation('relu'))
+#    model.add(Dropout(0.2))
 
     model.add(Dense(NUM_RAGAS))
     model.add(Activation('softmax'))
@@ -93,14 +94,16 @@ def baseline_model():
     # plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
     return model
 
+
+#logdir = "logs/scalars/" + str(datetime.now())
+#tensorboard_callback = keras.callbacks.Tensorboard(logdir=logdir)
 model = baseline_model()
 print(model.summary())
-HISTORY = []
-for i in range(20):
-    history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=10, verbose=2)
-    score = model.evaluate(np.array(X_test), np.array(y_test))
-    print(score)
-    HISTORY.append(history)
+
+#history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
+history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=200, verbose=2)
+score = model.evaluate(np.array(X_test), np.array(y_test))
+print(score)
 
 model.save('cnn3.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
@@ -111,7 +114,7 @@ model.save('cnn3.h5')
 
 # save history to a file
 with open('./trainHistoryDict_maxpool_dropout', 'wb') as file_pi:
-    pickle.dump(HISTORY, file_pi)
+    pickle.dump(history, file_pi)
 
 
 #print(history.history.keys())

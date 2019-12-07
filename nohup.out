@@ -4,164 +4,14 @@ Instructions for updating:
 If using Keras pass *_constraint arguments to layers.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
 
-Raga: kalyani 	 Number of Input files: 665
-Raga: pantuvarali 	 Number of Input files: 377
-Raga: kedaragaula 	 Number of Input files: 273
-Raga: thodi 	 Number of Input files: 556
-Raga: begada 	 Number of Input files: 615
-Raga: bhairavi 	 Number of Input files: 567
-Raga: mohana 	 Number of Input files: 436
-Raga: sankarabharana 	 Number of Input files: 770
-4259
-4259
-Traceback (most recent call last):
-  File "max_pool_model.py", line 91, in <module>
-    model = baseline_model()
-  File "max_pool_model.py", line 67, in baseline_model
-    model.add(Conv2D(64, (3, 3)))
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/sequential.py", line 182, in add
-    output_tensor = layer(self.outputs[0])
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/base_layer.py", line 489, in __call__
-    output = self.call(inputs, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/keras/layers/convolutional.py", line 171, in call
-    dilation_rate=self.dilation_rate)
-  File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 3717, in conv2d
-    **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 898, in convolution
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 1009, in convolution_internal
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 1071, in conv2d
-    data_format=data_format, dilations=dilations, name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/op_def_library.py", line 794, in _apply_op_helper
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/util/deprecation.py", line 507, in new_func
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3357, in create_op
-    attrs, op_def, compute_device)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3426, in _create_op_internal
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1770, in __init__
-    control_input_ops)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1610, in _create_c_op
-    raise ValueError(str(e))
-ValueError: Negative dimension size caused by subtracting 3 from 1 for 'conv2d_5/convolution' (op: 'Conv2D') with input shapes: [?,1,1,32], [3,3,32,64].
-Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-Raga: kalyani 	 Number of Input files: 665
-Raga: pantuvarali 	 Number of Input files: 377
-Raga: kedaragaula 	 Number of Input files: 273
-Raga: thodi 	 Number of Input files: 556
-Raga: begada 	 Number of Input files: 615
-Raga: bhairavi 	 Number of Input files: 567
-Raga: mohana 	 Number of Input files: 436
-Raga: sankarabharana 	 Number of Input files: 770
-4259
-4259
-Traceback (most recent call last):
-  File "max_pool_model.py", line 91, in <module>
-    model = baseline_model()
-  File "max_pool_model.py", line 67, in baseline_model
-    model.add(Conv2D(64, (3, 3)))
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/sequential.py", line 182, in add
-    output_tensor = layer(self.outputs[0])
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/base_layer.py", line 489, in __call__
-    output = self.call(inputs, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/keras/layers/convolutional.py", line 171, in call
-    dilation_rate=self.dilation_rate)
-  File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 3717, in conv2d
-    **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 898, in convolution
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 1009, in convolution_internal
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 1071, in conv2d
-    data_format=data_format, dilations=dilations, name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/op_def_library.py", line 794, in _apply_op_helper
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/util/deprecation.py", line 507, in new_func
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3357, in create_op
-    attrs, op_def, compute_device)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3426, in _create_op_internal
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1770, in __init__
-    control_input_ops)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1610, in _create_c_op
-    raise ValueError(str(e))
-ValueError: Negative dimension size caused by subtracting 3 from 1 for 'conv2d_5/convolution' (op: 'Conv2D') with input shapes: [?,1,1,32], [3,3,32,64].
-Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-Raga: kalyani 	 Number of Input files: 665
-Raga: pantuvarali 	 Number of Input files: 377
-Raga: kedaragaula 	 Number of Input files: 273
-Raga: thodi 	 Number of Input files: 556
-Raga: begada 	 Number of Input files: 615
-Raga: bhairavi 	 Number of Input files: 567
-Raga: mohana 	 Number of Input files: 436
-Raga: sankarabharana 	 Number of Input files: 770
-4259
-4259
-Traceback (most recent call last):
-  File "max_pool_model.py", line 91, in <module>
-    model = baseline_model()
-  File "max_pool_model.py", line 67, in baseline_model
-    model.add(Conv2D(64, (3, 3)))
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/sequential.py", line 182, in add
-    output_tensor = layer(self.outputs[0])
-  File "/usr/local/lib/python2.7/dist-packages/keras/engine/base_layer.py", line 489, in __call__
-    output = self.call(inputs, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/keras/layers/convolutional.py", line 171, in call
-    dilation_rate=self.dilation_rate)
-  File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 3717, in conv2d
-    **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 898, in convolution
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/nn_ops.py", line 1009, in convolution_internal
-    name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 1071, in conv2d
-    data_format=data_format, dilations=dilations, name=name)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/op_def_library.py", line 794, in _apply_op_helper
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/util/deprecation.py", line 507, in new_func
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3357, in create_op
-    attrs, op_def, compute_device)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 3426, in _create_op_internal
-    op_def=op_def)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1770, in __init__
-    control_input_ops)
-  File "/usr/local/lib/python2.7/dist-packages/tensorflow_core/python/framework/ops.py", line 1610, in _create_c_op
-    raise ValueError(str(e))
-ValueError: Negative dimension size caused by subtracting 3 from 2 for 'conv2d_5/convolution' (op: 'Conv2D') with input shapes: [?,2,3,32], [3,3,32,64].
-Using TensorFlow backend.
-Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-2019-12-06 20:38:05.071668: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+2019-12-07 07:22:46.581221: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2019-12-06 20:38:05.080653: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
-2019-12-06 20:38:05.081308: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x562671ed00f0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2019-12-06 20:38:05.081339: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2019-12-06 20:38:05.083187: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2019-12-07 07:22:46.594156: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-07 07:22:46.595149: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e834529c00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-07 07:22:46.595215: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-07 07:22:46.596041: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
 Raga: kalyani 	 Number of Input files: 665
 Raga: pantuvarali 	 Number of Input files: 377
 Raga: kedaragaula 	 Number of Input files: 273
@@ -206,70 +56,13 @@ dense_1 (Dense)              (None, 32)                6176
 _________________________________________________________________
 activation_5 (Activation)    (None, 32)                0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 32)                1056      
-_________________________________________________________________
-activation_6 (Activation)    (None, 32)                0         
-_________________________________________________________________
-dense_3 (Dense)              (None, 8)                 264       
-_________________________________________________________________
-activation_7 (Activation)    (None, 8)                 0         
-=================================================================
-Total params: 36,136
-Trainable params: 36,136
-Non-trainable params: 0
-_________________________________________________________________
-None
-Traceback (most recent call last):
-  File "max_pool_model.py", line 98, in <module>
-    history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=200, verbose=2)
-MemoryError
-Raga: kalyani 	 Number of Input files: 665
-Raga: pantuvarali 	 Number of Input files: 377
-Raga: kedaragaula 	 Number of Input files: 273
-Raga: thodi 	 Number of Input files: 556
-Raga: begada 	 Number of Input files: 615
-Raga: bhairavi 	 Number of Input files: 567
-Raga: mohana 	 Number of Input files: 436
-Raga: sankarabharana 	 Number of Input files: 770
-4259
-4259
-Model: "sequential_1"
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
-_________________________________________________________________
-activation_1 (Activation)    (None, 478, 638, 32)      0         
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 119, 159, 32)      0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 117, 157, 32)      9248      
-_________________________________________________________________
-activation_2 (Activation)    (None, 117, 157, 32)      0         
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 29, 39, 32)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 27, 37, 32)        9248      
-_________________________________________________________________
-activation_3 (Activation)    (None, 27, 37, 32)        0         
-_________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 6, 9, 32)          0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 4, 7, 32)          9248      
-_________________________________________________________________
-activation_4 (Activation)    (None, 4, 7, 32)          0         
-_________________________________________________________________
-max_pooling2d_4 (MaxPooling2 (None, 2, 3, 32)          0         
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 192)               0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 32)                6176      
-_________________________________________________________________
-activation_5 (Activation)    (None, 32)                0         
+dropout_1 (Dropout)          (None, 32)                0         
 _________________________________________________________________
 dense_2 (Dense)              (None, 32)                1056      
 _________________________________________________________________
 activation_6 (Activation)    (None, 32)                0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 32)                0         
 _________________________________________________________________
 dense_3 (Dense)              (None, 8)                 264       
 _________________________________________________________________
@@ -281,439 +74,211 @@ Non-trainable params: 0
 _________________________________________________________________
 None
 Epoch 1/200
- - 97s - loss: 2.8108 - accuracy: 0.1484
+ - 80s - loss: 2.8020 - accuracy: 0.1578
 Epoch 2/200
- - 75s - loss: 2.1008 - accuracy: 0.1412
+ - 79s - loss: 2.0682 - accuracy: 0.1785
 Epoch 3/200
- - 74s - loss: 1.9869 - accuracy: 0.2179
+ - 79s - loss: 2.1514 - accuracy: 0.1750
 Epoch 4/200
- - 75s - loss: 1.8700 - accuracy: 0.2633
+ - 82s - loss: 2.0449 - accuracy: 0.1772
 Epoch 5/200
- - 76s - loss: 1.7956 - accuracy: 0.2890
+ - 81s - loss: 2.0402 - accuracy: 0.1778
 Epoch 6/200
- - 75s - loss: 1.7568 - accuracy: 0.3184
+ - 81s - loss: 2.0403 - accuracy: 0.1778
 Epoch 7/200
- - 75s - loss: 1.7015 - accuracy: 0.3347
+ - 79s - loss: 2.0394 - accuracy: 0.1778
 Epoch 8/200
- - 74s - loss: 1.6525 - accuracy: 0.3694
+ - 79s - loss: 2.0380 - accuracy: 0.1778
 Epoch 9/200
- - 73s - loss: 1.6081 - accuracy: 0.3785
+ - 80s - loss: 2.0388 - accuracy: 0.1778
 Epoch 10/200
- - 74s - loss: 1.5407 - accuracy: 0.4148
+ - 79s - loss: 2.0400 - accuracy: 0.1778
 Epoch 11/200
- - 73s - loss: 1.4731 - accuracy: 0.4346
+ - 81s - loss: 2.0375 - accuracy: 0.1778
 Epoch 12/200
- - 75s - loss: 1.4230 - accuracy: 0.4768
+ - 81s - loss: 2.0383 - accuracy: 0.1778
 Epoch 13/200
- - 76s - loss: 1.3584 - accuracy: 0.5013
+ - 82s - loss: 2.0389 - accuracy: 0.1778
 Epoch 14/200
- - 74s - loss: 1.3002 - accuracy: 0.5147
+ - 81s - loss: 2.0388 - accuracy: 0.1778
 Epoch 15/200
- - 74s - loss: 1.2293 - accuracy: 0.5501
+ - 81s - loss: 2.0389 - accuracy: 0.1778
 Epoch 16/200
- - 76s - loss: 1.1723 - accuracy: 0.5673
+ - 79s - loss: 2.0384 - accuracy: 0.1778
 Epoch 17/200
- - 76s - loss: 1.1269 - accuracy: 0.6011
+ - 81s - loss: 2.0382 - accuracy: 0.1778
 Epoch 18/200
- - 76s - loss: 1.0605 - accuracy: 0.6155
+ - 77s - loss: 2.0385 - accuracy: 0.1778
 Epoch 19/200
- - 74s - loss: 0.9969 - accuracy: 0.6374
+ - 77s - loss: 2.0383 - accuracy: 0.1778
 Epoch 20/200
- - 74s - loss: 0.9485 - accuracy: 0.6581
+ - 82s - loss: 2.0374 - accuracy: 0.1778
 Epoch 21/200
- - 74s - loss: 0.8858 - accuracy: 0.6794
+ - 77s - loss: 2.0380 - accuracy: 0.1778
 Epoch 22/200
- - 75s - loss: 0.8554 - accuracy: 0.6932
+ - 79s - loss: 2.0378 - accuracy: 0.1778
 Epoch 23/200
- - 75s - loss: 0.7873 - accuracy: 0.7142
+ - 78s - loss: 2.0394 - accuracy: 0.1778
 Epoch 24/200
- - 75s - loss: 0.7337 - accuracy: 0.7392
+ - 78s - loss: 2.0377 - accuracy: 0.1778
 Epoch 25/200
- - 78s - loss: 0.6944 - accuracy: 0.7502
+ - 78s - loss: 2.0389 - accuracy: 0.1778
 Epoch 26/200
- - 75s - loss: 0.6508 - accuracy: 0.7664
+ - 79s - loss: 2.0379 - accuracy: 0.1778
 Epoch 27/200
- - 76s - loss: 0.5917 - accuracy: 0.7840
+ - 78s - loss: 2.0382 - accuracy: 0.1778
 Epoch 28/200
- - 73s - loss: 0.5797 - accuracy: 0.7909
+ - 79s - loss: 2.0387 - accuracy: 0.1778
 Epoch 29/200
- - 74s - loss: 0.5217 - accuracy: 0.8209
+ - 80s - loss: 2.0390 - accuracy: 0.1778
 Epoch 30/200
- - 74s - loss: 0.4898 - accuracy: 0.8278
+ - 81s - loss: 2.0389 - accuracy: 0.1778
 Epoch 31/200
- - 75s - loss: 0.4635 - accuracy: 0.8394
+ - 79s - loss: 2.0386 - accuracy: 0.1778
 Epoch 32/200
- - 74s - loss: 0.4542 - accuracy: 0.8397
+ - 82s - loss: 2.0382 - accuracy: 0.1778
 Epoch 33/200
- - 74s - loss: 0.4355 - accuracy: 0.8485
+ - 80s - loss: 2.0384 - accuracy: 0.1778
 Epoch 34/200
- - 77s - loss: 0.3569 - accuracy: 0.8820
+ - 79s - loss: 2.0378 - accuracy: 0.1778
 Epoch 35/200
- - 73s - loss: 0.3552 - accuracy: 0.8754
+ - 80s - loss: 2.0386 - accuracy: 0.1778
 Epoch 36/200
- - 73s - loss: 0.3274 - accuracy: 0.8817
+ - 83s - loss: 2.0380 - accuracy: 0.1778
 Epoch 37/200
- - 74s - loss: 0.3315 - accuracy: 0.8820
+ - 81s - loss: 2.0383 - accuracy: 0.1778
 Epoch 38/200
- - 78s - loss: 0.2968 - accuracy: 0.9042
+ - 81s - loss: 2.0376 - accuracy: 0.1778
 Epoch 39/200
- - 74s - loss: 0.2695 - accuracy: 0.9054
+ - 82s - loss: 2.0376 - accuracy: 0.1778
 Epoch 40/200
- - 76s - loss: 0.2577 - accuracy: 0.9076
+ - 80s - loss: 2.0376 - accuracy: 0.1778
 Epoch 41/200
- - 74s - loss: 0.2599 - accuracy: 0.9126
+ - 80s - loss: 2.0382 - accuracy: 0.1778
 Epoch 42/200
- - 77s - loss: 0.2391 - accuracy: 0.9177
+ - 80s - loss: 2.0374 - accuracy: 0.1778
 Epoch 43/200
- - 75s - loss: 0.2499 - accuracy: 0.9189
+ - 80s - loss: 2.0375 - accuracy: 0.1778
 Epoch 44/200
- - 76s - loss: 0.2393 - accuracy: 0.9198
+ - 79s - loss: 2.0379 - accuracy: 0.1778
 Epoch 45/200
- - 76s - loss: 0.2229 - accuracy: 0.9239
+ - 78s - loss: 2.0371 - accuracy: 0.1778
 Epoch 46/200
- - 74s - loss: 0.2273 - accuracy: 0.9271
+ - 79s - loss: 2.0373 - accuracy: 0.1778
 Epoch 47/200
- - 76s - loss: 0.2205 - accuracy: 0.9217
+ - 80s - loss: 2.0373 - accuracy: 0.1778
 Epoch 48/200
- - 76s - loss: 0.2150 - accuracy: 0.9324
+ - 80s - loss: 2.0373 - accuracy: 0.1778
 Epoch 49/200
- - 76s - loss: 0.1725 - accuracy: 0.9430
+ - 82s - loss: 2.0376 - accuracy: 0.1778
 Epoch 50/200
- - 77s - loss: 0.2059 - accuracy: 0.9314
+ - 80s - loss: 2.0386 - accuracy: 0.1778
 Epoch 51/200
- - 74s - loss: 0.1918 - accuracy: 0.9349
+ - 80s - loss: 2.0373 - accuracy: 0.1778
 Epoch 52/200
- - 72s - loss: 0.1703 - accuracy: 0.9405
+ - 79s - loss: 2.0382 - accuracy: 0.1778
 Epoch 53/200
- - 76s - loss: 0.1912 - accuracy: 0.9383
+ - 80s - loss: 2.0379 - accuracy: 0.1778
 Epoch 54/200
- - 74s - loss: 0.1726 - accuracy: 0.9389
+ - 81s - loss: 2.0377 - accuracy: 0.1778
 Epoch 55/200
- - 74s - loss: 0.1548 - accuracy: 0.9543
+ - 81s - loss: 2.0378 - accuracy: 0.1778
 Epoch 56/200
- - 73s - loss: 0.1413 - accuracy: 0.9565
+ - 80s - loss: 2.0383 - accuracy: 0.1778
 Epoch 57/200
- - 78s - loss: 0.1674 - accuracy: 0.9452
+ - 82s - loss: 2.0373 - accuracy: 0.1778
 Epoch 58/200
- - 74s - loss: 0.1791 - accuracy: 0.9427
+ - 79s - loss: 2.0379 - accuracy: 0.1778
 Epoch 59/200
- - 75s - loss: 0.1806 - accuracy: 0.9465
+ - 79s - loss: 2.0375 - accuracy: 0.1778
 Epoch 60/200
- - 78s - loss: 0.1500 - accuracy: 0.9537
+ - 78s - loss: 2.0383 - accuracy: 0.1778
 Epoch 61/200
- - 77s - loss: 0.1494 - accuracy: 0.9568
+ - 79s - loss: 2.0372 - accuracy: 0.1778
 Epoch 62/200
- - 76s - loss: 0.1787 - accuracy: 0.9427
+ - 81s - loss: 2.0375 - accuracy: 0.1778
 Epoch 63/200
- - 77s - loss: 0.1702 - accuracy: 0.9427
+ - 80s - loss: 2.0373 - accuracy: 0.1778
 Epoch 64/200
- - 76s - loss: 0.1665 - accuracy: 0.9471
+ - 79s - loss: 2.0377 - accuracy: 0.1778
 Epoch 65/200
- - 77s - loss: 0.1847 - accuracy: 0.9477
-Epoch 66/200
- - 77s - loss: 0.1512 - accuracy: 0.9546
-Epoch 67/200
- - 75s - loss: 0.1788 - accuracy: 0.9443
-Epoch 68/200
- - 77s - loss: 0.1481 - accuracy: 0.9568
-Epoch 69/200
- - 76s - loss: 0.1552 - accuracy: 0.9480
-Epoch 70/200
- - 75s - loss: 0.1435 - accuracy: 0.9584
-Epoch 71/200
- - 75s - loss: 0.1067 - accuracy: 0.9678
-Epoch 72/200
- - 77s - loss: 0.1449 - accuracy: 0.9602
-Epoch 73/200
- - 76s - loss: 0.1847 - accuracy: 0.9496
-Epoch 74/200
- - 77s - loss: 0.1382 - accuracy: 0.9649
-Epoch 75/200
- - 74s - loss: 0.1547 - accuracy: 0.9568
-Epoch 76/200
- - 75s - loss: 0.1682 - accuracy: 0.9496
-Epoch 77/200
- - 77s - loss: 0.1475 - accuracy: 0.9631
-Epoch 78/200
- - 76s - loss: 0.1708 - accuracy: 0.9527
-Epoch 79/200
- - 74s - loss: 0.1390 - accuracy: 0.9649
-Epoch 80/200
- - 77s - loss: 0.1400 - accuracy: 0.9606
-Epoch 81/200
- - 74s - loss: 0.1264 - accuracy: 0.9656
-Epoch 82/200
- - 76s - loss: 0.1606 - accuracy: 0.9609
-Epoch 83/200
- - 77s - loss: 0.1816 - accuracy: 0.9565
-Epoch 84/200
- - 74s - loss: 0.1501 - accuracy: 0.9580
-Epoch 85/200
- - 77s - loss: 0.1580 - accuracy: 0.9537
-Epoch 86/200
- - 78s - loss: 0.1281 - accuracy: 0.9643
-Epoch 87/200
- - 75s - loss: 0.1018 - accuracy: 0.9687
-Epoch 88/200
- - 74s - loss: 0.1352 - accuracy: 0.9593
-Epoch 89/200
- - 77s - loss: 0.1696 - accuracy: 0.9587
-Epoch 90/200
- - 75s - loss: 0.1434 - accuracy: 0.9640
-Epoch 91/200
- - 76s - loss: 0.1287 - accuracy: 0.9637
-Epoch 92/200
- - 76s - loss: 0.1160 - accuracy: 0.9681
-Epoch 93/200
- - 75s - loss: 0.1397 - accuracy: 0.9637
-Epoch 94/200
- - 75s - loss: 0.1336 - accuracy: 0.9627
-Epoch 95/200
- - 73s - loss: 0.1395 - accuracy: 0.9652
-Epoch 96/200
- - 75s - loss: 0.1326 - accuracy: 0.9618
-Epoch 97/200
- - 75s - loss: 0.1615 - accuracy: 0.9646
-Epoch 98/200
- - 76s - loss: 0.1750 - accuracy: 0.9609
-Epoch 99/200
- - 75s - loss: 0.1430 - accuracy: 0.9674
-Epoch 100/200
- - 73s - loss: 0.1323 - accuracy: 0.9637
-Epoch 101/200
- - 76s - loss: 0.1375 - accuracy: 0.9678
-Epoch 102/200
- - 76s - loss: 0.1578 - accuracy: 0.9643
-Epoch 103/200
- - 73s - loss: 0.1536 - accuracy: 0.9649
-Epoch 104/200
- - 75s - loss: 0.1363 - accuracy: 0.9634
-Epoch 105/200
- - 75s - loss: 0.1425 - accuracy: 0.9684
-Epoch 106/200
- - 73s - loss: 0.1307 - accuracy: 0.9646
-Epoch 107/200
- - 76s - loss: 0.1449 - accuracy: 0.9668
-Epoch 108/200
- - 74s - loss: 0.0940 - accuracy: 0.9759
-Epoch 109/200
- - 76s - loss: 0.0975 - accuracy: 0.9721
-Epoch 110/200
- - 75s - loss: 0.1559 - accuracy: 0.9590
-Epoch 111/200
- - 77s - loss: 0.1273 - accuracy: 0.9678
-Epoch 112/200
- - 73s - loss: 0.1312 - accuracy: 0.9693
-Epoch 113/200
- - 74s - loss: 0.1549 - accuracy: 0.9662
-Epoch 114/200
- - 76s - loss: 0.1693 - accuracy: 0.9612
-Epoch 115/200
- - 75s - loss: 0.1456 - accuracy: 0.9665
-Epoch 116/200
- - 75s - loss: 0.0920 - accuracy: 0.9784
-Epoch 117/200
- - 73s - loss: 0.1625 - accuracy: 0.9668
-Epoch 118/200
- - 73s - loss: 0.1147 - accuracy: 0.9696
-Epoch 119/200
- - 74s - loss: 0.1977 - accuracy: 0.9612
-Epoch 120/200
- - 75s - loss: 0.1411 - accuracy: 0.9696
-Epoch 121/200
- - 73s - loss: 0.1403 - accuracy: 0.9671
-Epoch 122/200
- - 74s - loss: 0.1227 - accuracy: 0.9753
-Epoch 123/200
- - 75s - loss: 0.1138 - accuracy: 0.9696
-Epoch 124/200
- - 76s - loss: 0.1428 - accuracy: 0.9684
-Epoch 125/200
- - 73s - loss: 0.1177 - accuracy: 0.9696
-Epoch 126/200
- - 75s - loss: 0.1594 - accuracy: 0.9621
-Epoch 127/200
- - 72s - loss: 0.1317 - accuracy: 0.9659
-Epoch 128/200
- - 76s - loss: 0.1289 - accuracy: 0.9743
-Epoch 129/200
- - 77s - loss: 0.1513 - accuracy: 0.9696
-Epoch 130/200
- - 74s - loss: 0.1242 - accuracy: 0.9731
-Epoch 131/200
- - 77s - loss: 0.1713 - accuracy: 0.9609
-Epoch 132/200
- - 75s - loss: 0.1137 - accuracy: 0.9674
-Epoch 133/200
- - 73s - loss: 0.1337 - accuracy: 0.9718
-Epoch 134/200
- - 74s - loss: 0.1482 - accuracy: 0.9659
-Epoch 135/200
- - 75s - loss: 0.1557 - accuracy: 0.9684
-Epoch 136/200
- - 76s - loss: 0.1422 - accuracy: 0.9690
-Epoch 137/200
- - 75s - loss: 0.0923 - accuracy: 0.9756
-Epoch 138/200
- - 76s - loss: 0.1527 - accuracy: 0.9709
-Epoch 139/200
- - 75s - loss: 0.1905 - accuracy: 0.9599
-Epoch 140/200
- - 76s - loss: 0.1322 - accuracy: 0.9703
-Epoch 141/200
- - 74s - loss: 0.1411 - accuracy: 0.9740
-Epoch 142/200
- - 75s - loss: 0.1159 - accuracy: 0.9746
-Epoch 143/200
- - 74s - loss: 0.1633 - accuracy: 0.9709
-Epoch 144/200
- - 77s - loss: 0.1063 - accuracy: 0.9737
-Epoch 145/200
- - 75s - loss: 0.1045 - accuracy: 0.9759
-Epoch 146/200
- - 75s - loss: 0.1220 - accuracy: 0.9737
-Epoch 147/200
- - 76s - loss: 0.1324 - accuracy: 0.9706
-Epoch 148/200
- - 77s - loss: 0.1519 - accuracy: 0.9703
-Epoch 149/200
- - 76s - loss: 0.1471 - accuracy: 0.9768
-Epoch 150/200
- - 75s - loss: 0.0947 - accuracy: 0.9746
-Epoch 151/200
- - 74s - loss: 0.1474 - accuracy: 0.9687
-Epoch 152/200
- - 75s - loss: 0.1401 - accuracy: 0.9734
-Epoch 153/200
- - 76s - loss: 0.1480 - accuracy: 0.9652
-Epoch 154/200
- - 76s - loss: 0.0968 - accuracy: 0.9771
-Epoch 155/200
- - 75s - loss: 0.1307 - accuracy: 0.9734
-Epoch 156/200
- - 74s - loss: 0.1366 - accuracy: 0.9734
-Epoch 157/200
- - 77s - loss: 0.1115 - accuracy: 0.9734
-Epoch 158/200
- - 76s - loss: 0.1613 - accuracy: 0.9684
-Epoch 159/200
- - 75s - loss: 0.0927 - accuracy: 0.9771
-Epoch 160/200
- - 73s - loss: 0.1215 - accuracy: 0.9731
-Epoch 161/200
- - 77s - loss: 0.1782 - accuracy: 0.9656
-Epoch 162/200
- - 76s - loss: 0.1074 - accuracy: 0.9750
-Epoch 163/200
- - 77s - loss: 0.1289 - accuracy: 0.9724
-Epoch 164/200
- - 75s - loss: 0.1276 - accuracy: 0.9728
-Epoch 165/200
- - 77s - loss: 0.1544 - accuracy: 0.9696
-Epoch 166/200
- - 76s - loss: 0.0819 - accuracy: 0.9787
-Epoch 167/200
- - 77s - loss: 0.1195 - accuracy: 0.9753
-Epoch 168/200
- - 77s - loss: 0.1275 - accuracy: 0.9771
-Epoch 169/200
- - 73s - loss: 0.1989 - accuracy: 0.9668
-Epoch 170/200
- - 75s - loss: 0.1098 - accuracy: 0.9781
-Epoch 171/200
- - 76s - loss: 0.1341 - accuracy: 0.9703
-Epoch 172/200
- - 75s - loss: 0.1408 - accuracy: 0.9743
-Epoch 173/200
- - 74s - loss: 0.1202 - accuracy: 0.9759
-Epoch 174/200
- - 76s - loss: 0.0916 - accuracy: 0.9768
-Epoch 175/200
- - 76s - loss: 0.1147 - accuracy: 0.9756
-Epoch 176/200
- - 74s - loss: 0.1375 - accuracy: 0.9718
-Epoch 177/200
- - 75s - loss: 0.1461 - accuracy: 0.9734
-Epoch 178/200
- - 76s - loss: 0.1374 - accuracy: 0.9693
-Epoch 179/200
- - 78s - loss: 0.0897 - accuracy: 0.9796
-Epoch 180/200
- - 74s - loss: 0.0893 - accuracy: 0.9809
-Epoch 181/200
- - 76s - loss: 0.1120 - accuracy: 0.9762
-Epoch 182/200
- - 74s - loss: 0.1871 - accuracy: 0.9699
-Epoch 183/200
- - 76s - loss: 0.1211 - accuracy: 0.9756
-Epoch 184/200
- - 75s - loss: 0.1277 - accuracy: 0.9768
-Epoch 185/200
- - 74s - loss: 0.1096 - accuracy: 0.9778
-Epoch 186/200
- - 75s - loss: 0.1147 - accuracy: 0.9746
-Epoch 187/200
- - 75s - loss: 0.1570 - accuracy: 0.9715
-Epoch 188/200
- - 74s - loss: 0.1223 - accuracy: 0.9768
-Epoch 189/200
- - 76s - loss: 0.1203 - accuracy: 0.9721
-Epoch 190/200
- - 77s - loss: 0.1634 - accuracy: 0.9715
-Epoch 191/200
- - 76s - loss: 0.1413 - accuracy: 0.9768
-Epoch 192/200
- - 77s - loss: 0.1244 - accuracy: 0.9753
-Epoch 193/200
- - 73s - loss: 0.1274 - accuracy: 0.9753
-Epoch 194/200
- - 74s - loss: 0.1117 - accuracy: 0.9765
-Epoch 195/200
- - 73s - loss: 0.1193 - accuracy: 0.9784
-Epoch 196/200
- - 76s - loss: 0.1229 - accuracy: 0.9759
-Epoch 197/200
- - 78s - loss: 0.0967 - accuracy: 0.9787
-Epoch 198/200
- - 74s - loss: 0.1096 - accuracy: 0.9790
-Epoch 199/200
- - 76s - loss: 0.1459 - accuracy: 0.9715
-Epoch 200/200
- - 75s - loss: 0.1328 - accuracy: 0.9762
-
-  32/1065 [..............................] - ETA: 13s
-  64/1065 [>.............................] - ETA: 12s
-  96/1065 [=>............................] - ETA: 10s
- 128/1065 [==>...........................] - ETA: 10s
- 160/1065 [===>..........................] - ETA: 9s 
- 192/1065 [====>.........................] - ETA: 9s
- 224/1065 [=====>........................] - ETA: 8s
- 256/1065 [======>.......................] - ETA: 8s
- 288/1065 [=======>......................] - ETA: 8s
- 320/1065 [========>.....................] - ETA: 7s
- 352/1065 [========>.....................] - ETA: 7s
- 384/1065 [=========>....................] - ETA: 7s
- 416/1065 [==========>...................] - ETA: 6s
- 448/1065 [===========>..................] - ETA: 6s
- 480/1065 [============>.................] - ETA: 6s
- 512/1065 [=============>................] - ETA: 5s
- 544/1065 [==============>...............] - ETA: 5s
- 576/1065 [===============>..............] - ETA: 5s
- 608/1065 [================>.............] - ETA: 4s
- 640/1065 [=================>............] - ETA: 4s
- 672/1065 [=================>............] - ETA: 4s
- 704/1065 [==================>...........] - ETA: 3s
- 736/1065 [===================>..........] - ETA: 3s
- 768/1065 [====================>.........] - ETA: 3s
- 800/1065 [=====================>........] - ETA: 2s
- 832/1065 [======================>.......] - ETA: 2s
- 864/1065 [=======================>......] - ETA: 2s
- 896/1065 [========================>.....] - ETA: 1s
- 928/1065 [=========================>....] - ETA: 1s
- 960/1065 [==========================>...] - ETA: 1s
- 992/1065 [==========================>...] - ETA: 0s
-1024/1065 [===========================>..] - ETA: 0s
-1056/1065 [============================>.] - ETA: 0s
-1065/1065 [==============================] - 11s 10ms/step
-[11.366180589165486, 0.5248826146125793]
+ - 79s - loss: 2.0370 - accuracy: 0.1778
 Using TensorFlow backend.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2019-12-07 09:31:54.433049: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2019-12-07 09:31:54.831866: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-07 09:31:54.832822: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5581264e8860 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-07 09:31:54.832902: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-07 09:31:54.864283: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Raga: kalyani 	 Number of Input files: 665
+Raga: pantuvarali 	 Number of Input files: 377
+Raga: kedaragaula 	 Number of Input files: 273
+Raga: thodi 	 Number of Input files: 556
+Raga: begada 	 Number of Input files: 615
+Raga: bhairavi 	 Number of Input files: 567
+Raga: mohana 	 Number of Input files: 436
+Raga: sankarabharana 	 Number of Input files: 770
+4259
+4259
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
+_________________________________________________________________
+activation_1 (Activation)    (None, 478, 638, 32)      0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 119, 159, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 117, 157, 64)      18496     
+_________________________________________________________________
+activation_2 (Activation)    (None, 117, 157, 64)      0         
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 29, 39, 64)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 27, 37, 128)       73856     
+_________________________________________________________________
+activation_3 (Activation)    (None, 27, 37, 128)       0         
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 6, 9, 128)         0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 4, 7, 128)         147584    
+_________________________________________________________________
+activation_4 (Activation)    (None, 4, 7, 128)         0         
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 2, 3, 128)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 768)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                24608     
+_________________________________________________________________
+activation_5 (Activation)    (None, 32)                0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 264       
+_________________________________________________________________
+activation_6 (Activation)    (None, 8)                 0         
+=================================================================
+Total params: 265,704
+Trainable params: 265,704
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/200
+ - 103s - loss: 4.3211 - accuracy: 0.1584
+Epoch 2/200
+ - 99s - loss: 2.0657 - accuracy: 0.1778
+Epoch 3/200
+ - 97s - loss: 2.0575 - accuracy: 0.1778
+Epoch 4/200
+ - 99s - loss: 2.0517 - accuracy: 0.1778
+Epoch 5/200
+ - 99s - loss: 2.0473 - accuracy: 0.1778
