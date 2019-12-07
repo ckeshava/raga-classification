@@ -70,14 +70,13 @@ def baseline_model():
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
 
-    #model.add(Conv2D(64, (3, 3)))
-    #model.add(Activation('relu'))
-    #model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(256, (2, 2)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(1, 2)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
-    model.add(Dense(32))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.2))
+    #model.add(Dense(32))
+    #model.add(Activation('relu'))
 
 #    model.add(Dense(32))
 #    model.add(Activation('relu'))
@@ -101,11 +100,11 @@ model = baseline_model()
 print(model.summary())
 
 #history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
-history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=200, verbose=2)
+history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_split=0.20, epochs=200, verbose=2)
 score = model.evaluate(np.array(X_test), np.array(y_test))
 print(score)
 
-model.save('cnn3.h5')
+model.save('fully_convolutional_model.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
 #kfold = KFold(n_splits=10, shuffle=True)
 #results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)

@@ -4,217 +4,12 @@ Instructions for updating:
 If using Keras pass *_constraint arguments to layers.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
 
-2019-12-07 07:22:46.581221: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+2019-12-07 14:34:01.749764: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2019-12-07 07:22:46.594156: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
-2019-12-07 07:22:46.595149: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e834529c00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2019-12-07 07:22:46.595215: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2019-12-07 07:22:46.596041: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-Raga: kalyani 	 Number of Input files: 665
-Raga: pantuvarali 	 Number of Input files: 377
-Raga: kedaragaula 	 Number of Input files: 273
-Raga: thodi 	 Number of Input files: 556
-Raga: begada 	 Number of Input files: 615
-Raga: bhairavi 	 Number of Input files: 567
-Raga: mohana 	 Number of Input files: 436
-Raga: sankarabharana 	 Number of Input files: 770
-4259
-4259
-Model: "sequential_1"
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d_1 (Conv2D)            (None, 478, 638, 32)      896       
-_________________________________________________________________
-activation_1 (Activation)    (None, 478, 638, 32)      0         
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 119, 159, 32)      0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 117, 157, 32)      9248      
-_________________________________________________________________
-activation_2 (Activation)    (None, 117, 157, 32)      0         
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 29, 39, 32)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 27, 37, 32)        9248      
-_________________________________________________________________
-activation_3 (Activation)    (None, 27, 37, 32)        0         
-_________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 6, 9, 32)          0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 4, 7, 32)          9248      
-_________________________________________________________________
-activation_4 (Activation)    (None, 4, 7, 32)          0         
-_________________________________________________________________
-max_pooling2d_4 (MaxPooling2 (None, 2, 3, 32)          0         
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 192)               0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 32)                6176      
-_________________________________________________________________
-activation_5 (Activation)    (None, 32)                0         
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 32)                0         
-_________________________________________________________________
-dense_2 (Dense)              (None, 32)                1056      
-_________________________________________________________________
-activation_6 (Activation)    (None, 32)                0         
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 32)                0         
-_________________________________________________________________
-dense_3 (Dense)              (None, 8)                 264       
-_________________________________________________________________
-activation_7 (Activation)    (None, 8)                 0         
-=================================================================
-Total params: 36,136
-Trainable params: 36,136
-Non-trainable params: 0
-_________________________________________________________________
-None
-Epoch 1/200
- - 80s - loss: 2.8020 - accuracy: 0.1578
-Epoch 2/200
- - 79s - loss: 2.0682 - accuracy: 0.1785
-Epoch 3/200
- - 79s - loss: 2.1514 - accuracy: 0.1750
-Epoch 4/200
- - 82s - loss: 2.0449 - accuracy: 0.1772
-Epoch 5/200
- - 81s - loss: 2.0402 - accuracy: 0.1778
-Epoch 6/200
- - 81s - loss: 2.0403 - accuracy: 0.1778
-Epoch 7/200
- - 79s - loss: 2.0394 - accuracy: 0.1778
-Epoch 8/200
- - 79s - loss: 2.0380 - accuracy: 0.1778
-Epoch 9/200
- - 80s - loss: 2.0388 - accuracy: 0.1778
-Epoch 10/200
- - 79s - loss: 2.0400 - accuracy: 0.1778
-Epoch 11/200
- - 81s - loss: 2.0375 - accuracy: 0.1778
-Epoch 12/200
- - 81s - loss: 2.0383 - accuracy: 0.1778
-Epoch 13/200
- - 82s - loss: 2.0389 - accuracy: 0.1778
-Epoch 14/200
- - 81s - loss: 2.0388 - accuracy: 0.1778
-Epoch 15/200
- - 81s - loss: 2.0389 - accuracy: 0.1778
-Epoch 16/200
- - 79s - loss: 2.0384 - accuracy: 0.1778
-Epoch 17/200
- - 81s - loss: 2.0382 - accuracy: 0.1778
-Epoch 18/200
- - 77s - loss: 2.0385 - accuracy: 0.1778
-Epoch 19/200
- - 77s - loss: 2.0383 - accuracy: 0.1778
-Epoch 20/200
- - 82s - loss: 2.0374 - accuracy: 0.1778
-Epoch 21/200
- - 77s - loss: 2.0380 - accuracy: 0.1778
-Epoch 22/200
- - 79s - loss: 2.0378 - accuracy: 0.1778
-Epoch 23/200
- - 78s - loss: 2.0394 - accuracy: 0.1778
-Epoch 24/200
- - 78s - loss: 2.0377 - accuracy: 0.1778
-Epoch 25/200
- - 78s - loss: 2.0389 - accuracy: 0.1778
-Epoch 26/200
- - 79s - loss: 2.0379 - accuracy: 0.1778
-Epoch 27/200
- - 78s - loss: 2.0382 - accuracy: 0.1778
-Epoch 28/200
- - 79s - loss: 2.0387 - accuracy: 0.1778
-Epoch 29/200
- - 80s - loss: 2.0390 - accuracy: 0.1778
-Epoch 30/200
- - 81s - loss: 2.0389 - accuracy: 0.1778
-Epoch 31/200
- - 79s - loss: 2.0386 - accuracy: 0.1778
-Epoch 32/200
- - 82s - loss: 2.0382 - accuracy: 0.1778
-Epoch 33/200
- - 80s - loss: 2.0384 - accuracy: 0.1778
-Epoch 34/200
- - 79s - loss: 2.0378 - accuracy: 0.1778
-Epoch 35/200
- - 80s - loss: 2.0386 - accuracy: 0.1778
-Epoch 36/200
- - 83s - loss: 2.0380 - accuracy: 0.1778
-Epoch 37/200
- - 81s - loss: 2.0383 - accuracy: 0.1778
-Epoch 38/200
- - 81s - loss: 2.0376 - accuracy: 0.1778
-Epoch 39/200
- - 82s - loss: 2.0376 - accuracy: 0.1778
-Epoch 40/200
- - 80s - loss: 2.0376 - accuracy: 0.1778
-Epoch 41/200
- - 80s - loss: 2.0382 - accuracy: 0.1778
-Epoch 42/200
- - 80s - loss: 2.0374 - accuracy: 0.1778
-Epoch 43/200
- - 80s - loss: 2.0375 - accuracy: 0.1778
-Epoch 44/200
- - 79s - loss: 2.0379 - accuracy: 0.1778
-Epoch 45/200
- - 78s - loss: 2.0371 - accuracy: 0.1778
-Epoch 46/200
- - 79s - loss: 2.0373 - accuracy: 0.1778
-Epoch 47/200
- - 80s - loss: 2.0373 - accuracy: 0.1778
-Epoch 48/200
- - 80s - loss: 2.0373 - accuracy: 0.1778
-Epoch 49/200
- - 82s - loss: 2.0376 - accuracy: 0.1778
-Epoch 50/200
- - 80s - loss: 2.0386 - accuracy: 0.1778
-Epoch 51/200
- - 80s - loss: 2.0373 - accuracy: 0.1778
-Epoch 52/200
- - 79s - loss: 2.0382 - accuracy: 0.1778
-Epoch 53/200
- - 80s - loss: 2.0379 - accuracy: 0.1778
-Epoch 54/200
- - 81s - loss: 2.0377 - accuracy: 0.1778
-Epoch 55/200
- - 81s - loss: 2.0378 - accuracy: 0.1778
-Epoch 56/200
- - 80s - loss: 2.0383 - accuracy: 0.1778
-Epoch 57/200
- - 82s - loss: 2.0373 - accuracy: 0.1778
-Epoch 58/200
- - 79s - loss: 2.0379 - accuracy: 0.1778
-Epoch 59/200
- - 79s - loss: 2.0375 - accuracy: 0.1778
-Epoch 60/200
- - 78s - loss: 2.0383 - accuracy: 0.1778
-Epoch 61/200
- - 79s - loss: 2.0372 - accuracy: 0.1778
-Epoch 62/200
- - 81s - loss: 2.0375 - accuracy: 0.1778
-Epoch 63/200
- - 80s - loss: 2.0373 - accuracy: 0.1778
-Epoch 64/200
- - 79s - loss: 2.0377 - accuracy: 0.1778
-Epoch 65/200
- - 79s - loss: 2.0370 - accuracy: 0.1778
-Using TensorFlow backend.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
-Instructions for updating:
-If using Keras pass *_constraint arguments to layers.
-WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-2019-12-07 09:31:54.433049: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
-To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2019-12-07 09:31:54.831866: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
-2019-12-07 09:31:54.832822: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5581264e8860 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2019-12-07 09:31:54.832902: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2019-12-07 09:31:54.864283: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2019-12-07 14:34:02.171478: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-07 14:34:02.172391: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5640c091fe40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-07 14:34:02.172522: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-07 14:34:02.197405: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
 Raga: kalyani 	 Number of Input files: 665
@@ -255,30 +50,233 @@ activation_4 (Activation)    (None, 4, 7, 128)         0
 _________________________________________________________________
 max_pooling2d_4 (MaxPooling2 (None, 2, 3, 128)         0         
 _________________________________________________________________
-flatten_1 (Flatten)          (None, 768)               0         
+conv2d_5 (Conv2D)            (None, 1, 2, 256)         131328    
 _________________________________________________________________
-dense_1 (Dense)              (None, 32)                24608     
+activation_5 (Activation)    (None, 1, 2, 256)         0         
 _________________________________________________________________
-activation_5 (Activation)    (None, 32)                0         
+max_pooling2d_5 (MaxPooling2 (None, 1, 1, 256)         0         
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 32)                0         
+flatten_1 (Flatten)          (None, 256)               0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 8)                 264       
+dense_1 (Dense)              (None, 8)                 2056      
 _________________________________________________________________
 activation_6 (Activation)    (None, 8)                 0         
 =================================================================
-Total params: 265,704
-Trainable params: 265,704
+Total params: 374,216
+Trainable params: 374,216
 Non-trainable params: 0
 _________________________________________________________________
 None
+Train on 2555 samples, validate on 639 samples
 Epoch 1/200
- - 103s - loss: 4.3211 - accuracy: 0.1584
+ - 93s - loss: 3.5426 - accuracy: 0.1875 - val_loss: 1.9324 - val_accuracy: 0.2567
 Epoch 2/200
- - 99s - loss: 2.0657 - accuracy: 0.1778
+ - 90s - loss: 1.9226 - accuracy: 0.2505 - val_loss: 1.8831 - val_accuracy: 0.2582
 Epoch 3/200
- - 97s - loss: 2.0575 - accuracy: 0.1778
+ - 91s - loss: 1.8070 - accuracy: 0.2908 - val_loss: 1.8347 - val_accuracy: 0.2973
 Epoch 4/200
- - 99s - loss: 2.0517 - accuracy: 0.1778
+ - 92s - loss: 1.7159 - accuracy: 0.3386 - val_loss: 1.8982 - val_accuracy: 0.2441
 Epoch 5/200
- - 99s - loss: 2.0473 - accuracy: 0.1778
+ - 91s - loss: 1.6090 - accuracy: 0.3777 - val_loss: 1.6403 - val_accuracy: 0.3709
+Epoch 6/200
+ - 93s - loss: 1.4595 - accuracy: 0.4548 - val_loss: 1.5964 - val_accuracy: 0.4006
+Epoch 7/200
+ - 92s - loss: 1.3355 - accuracy: 0.4967 - val_loss: 1.5492 - val_accuracy: 0.4288
+Epoch 8/200
+ - 93s - loss: 1.1977 - accuracy: 0.5659 - val_loss: 1.4843 - val_accuracy: 0.4491
+Epoch 9/200
+ - 91s - loss: 1.0304 - accuracy: 0.6231 - val_loss: 1.5566 - val_accuracy: 0.4664
+Epoch 10/200
+ - 93s - loss: 0.9339 - accuracy: 0.6568 - val_loss: 1.7142 - val_accuracy: 0.4679
+Epoch 11/200
+ - 93s - loss: 0.8407 - accuracy: 0.7057 - val_loss: 1.5249 - val_accuracy: 0.5086
+Epoch 12/200
+ - 92s - loss: 0.7024 - accuracy: 0.7507 - val_loss: 1.6027 - val_accuracy: 0.5164
+Epoch 13/200
+ - 91s - loss: 0.5661 - accuracy: 0.8016 - val_loss: 1.8264 - val_accuracy: 0.5336
+Epoch 14/200
+ - 92s - loss: 0.4706 - accuracy: 0.8438 - val_loss: 2.1208 - val_accuracy: 0.4726
+Epoch 15/200
+ - 92s - loss: 0.4224 - accuracy: 0.8509 - val_loss: 2.2457 - val_accuracy: 0.4945
+Epoch 16/200
+ - 91s - loss: 0.3896 - accuracy: 0.8759 - val_loss: 2.2702 - val_accuracy: 0.5117
+Epoch 17/200
+ - 93s - loss: 0.3326 - accuracy: 0.8935 - val_loss: 2.4257 - val_accuracy: 0.4726
+Epoch 18/200
+ - 91s - loss: 0.2567 - accuracy: 0.9155 - val_loss: 2.0905 - val_accuracy: 0.5509
+Epoch 19/200
+ - 92s - loss: 0.2546 - accuracy: 0.9217 - val_loss: 2.2963 - val_accuracy: 0.5430
+Epoch 20/200
+ - 96s - loss: 0.2523 - accuracy: 0.9276 - val_loss: 2.7430 - val_accuracy: 0.4883
+Epoch 21/200
+ - 92s - loss: 0.1832 - accuracy: 0.9409 - val_loss: 2.9818 - val_accuracy: 0.5164
+Epoch 22/200
+ - 91s - loss: 0.2039 - accuracy: 0.9374 - val_loss: 2.4595 - val_accuracy: 0.5571
+Epoch 23/200
+ - 91s - loss: 0.1894 - accuracy: 0.9491 - val_loss: 3.1193 - val_accuracy: 0.5211
+Epoch 24/200
+ - 92s - loss: 0.1872 - accuracy: 0.9554 - val_loss: 3.3635 - val_accuracy: 0.5368
+Epoch 25/200
+ - 92s - loss: 0.1678 - accuracy: 0.9515 - val_loss: 3.0291 - val_accuracy: 0.5790
+Epoch 26/200
+ - 92s - loss: 0.1349 - accuracy: 0.9632 - val_loss: 7.5142 - val_accuracy: 0.4397
+Epoch 27/200
+ - 92s - loss: 0.2168 - accuracy: 0.9491 - val_loss: 5.0497 - val_accuracy: 0.4429
+Epoch 28/200
+ - 93s - loss: 0.1422 - accuracy: 0.9652 - val_loss: 3.4130 - val_accuracy: 0.5462
+Epoch 29/200
+ - 92s - loss: 0.1556 - accuracy: 0.9644 - val_loss: 3.7744 - val_accuracy: 0.5336
+Epoch 30/200
+ - 92s - loss: 0.1761 - accuracy: 0.9585 - val_loss: 4.6375 - val_accuracy: 0.5086
+Epoch 31/200
+ - 92s - loss: 0.1481 - accuracy: 0.9601 - val_loss: 3.6763 - val_accuracy: 0.5493
+Epoch 32/200
+ - 91s - loss: 0.1282 - accuracy: 0.9695 - val_loss: 3.7099 - val_accuracy: 0.5681
+Epoch 33/200
+ - 92s - loss: 0.1765 - accuracy: 0.9593 - val_loss: 4.0696 - val_accuracy: 0.5509
+Epoch 34/200
+ - 92s - loss: 0.1476 - accuracy: 0.9632 - val_loss: 4.4095 - val_accuracy: 0.5446
+Epoch 35/200
+ - 91s - loss: 0.1210 - accuracy: 0.9671 - val_loss: 4.0379 - val_accuracy: 0.5540
+Epoch 36/200
+ - 91s - loss: 0.1428 - accuracy: 0.9624 - val_loss: 4.1898 - val_accuracy: 0.5587
+Epoch 37/200
+ - 90s - loss: 0.1475 - accuracy: 0.9679 - val_loss: 5.1302 - val_accuracy: 0.4554
+Epoch 38/200
+ - 90s - loss: 0.1760 - accuracy: 0.9593 - val_loss: 5.3851 - val_accuracy: 0.5164
+Epoch 39/200
+ - 90s - loss: 0.1063 - accuracy: 0.9706 - val_loss: 8.6278 - val_accuracy: 0.4507
+Epoch 40/200
+ - 92s - loss: 0.1704 - accuracy: 0.9585 - val_loss: 4.5417 - val_accuracy: 0.5493
+Epoch 41/200
+ - 92s - loss: 0.0899 - accuracy: 0.9734 - val_loss: 4.5701 - val_accuracy: 0.5180
+Epoch 42/200
+ - 91s - loss: 0.1337 - accuracy: 0.9679 - val_loss: 4.7739 - val_accuracy: 0.5540
+Epoch 43/200
+ - 91s - loss: 0.1443 - accuracy: 0.9656 - val_loss: 5.0597 - val_accuracy: 0.5446
+Epoch 44/200
+ - 91s - loss: 0.1259 - accuracy: 0.9699 - val_loss: 5.0988 - val_accuracy: 0.5556
+Epoch 45/200
+ - 91s - loss: 0.1094 - accuracy: 0.9703 - val_loss: 5.8361 - val_accuracy: 0.5446
+Epoch 46/200
+ - 93s - loss: 0.1430 - accuracy: 0.9714 - val_loss: 5.1810 - val_accuracy: 0.5603
+Epoch 47/200
+ - 92s - loss: 0.1677 - accuracy: 0.9613 - val_loss: 5.1285 - val_accuracy: 0.5227
+Epoch 48/200
+ - 92s - loss: 0.1264 - accuracy: 0.9710 - val_loss: 7.0395 - val_accuracy: 0.4945
+Epoch 49/200
+ - 93s - loss: 0.1492 - accuracy: 0.9691 - val_loss: 5.1113 - val_accuracy: 0.5477
+Epoch 50/200
+ - 92s - loss: 0.1003 - accuracy: 0.9777 - val_loss: 6.4803 - val_accuracy: 0.5274
+Epoch 51/200
+ - 90s - loss: 0.1017 - accuracy: 0.9773 - val_loss: 5.9065 - val_accuracy: 0.5211
+Epoch 52/200
+ - 92s - loss: 0.1313 - accuracy: 0.9761 - val_loss: 6.4675 - val_accuracy: 0.5164
+Epoch 53/200
+ - 89s - loss: 0.1005 - accuracy: 0.9742 - val_loss: 5.2836 - val_accuracy: 0.5665
+Epoch 54/200
+ - 92s - loss: 0.1219 - accuracy: 0.9750 - val_loss: 5.0447 - val_accuracy: 0.5743
+Epoch 55/200
+ - 90s - loss: 0.1299 - accuracy: 0.9757 - val_loss: 6.7818 - val_accuracy: 0.5477
+Epoch 56/200
+ - 91s - loss: 0.0784 - accuracy: 0.9879 - val_loss: 7.0624 - val_accuracy: 0.4710
+Epoch 57/200
+ - 92s - loss: 0.1509 - accuracy: 0.9691 - val_loss: 5.8609 - val_accuracy: 0.5649
+Epoch 58/200
+ - 90s - loss: 0.1269 - accuracy: 0.9722 - val_loss: 6.1914 - val_accuracy: 0.5305
+Epoch 59/200
+ - 90s - loss: 0.1194 - accuracy: 0.9757 - val_loss: 5.6662 - val_accuracy: 0.5618
+Epoch 60/200
+ - 95s - loss: 0.0644 - accuracy: 0.9836 - val_loss: 6.3483 - val_accuracy: 0.5540
+Epoch 61/200
+ - 92s - loss: 0.1422 - accuracy: 0.9753 - val_loss: 8.0498 - val_accuracy: 0.5070
+Epoch 62/200
+ - 91s - loss: 0.1056 - accuracy: 0.9773 - val_loss: 6.4378 - val_accuracy: 0.5587
+Epoch 63/200
+ - 90s - loss: 0.1008 - accuracy: 0.9800 - val_loss: 6.4394 - val_accuracy: 0.5430
+Epoch 64/200
+ - 93s - loss: 0.1616 - accuracy: 0.9769 - val_loss: 6.2293 - val_accuracy: 0.5352
+Epoch 65/200
+ - 91s - loss: 0.1724 - accuracy: 0.9683 - val_loss: 6.2491 - val_accuracy: 0.5634
+Epoch 66/200
+ - 90s - loss: 0.1035 - accuracy: 0.9789 - val_loss: 6.6441 - val_accuracy: 0.5665
+Epoch 67/200
+ - 91s - loss: 0.1154 - accuracy: 0.9773 - val_loss: 7.2544 - val_accuracy: 0.5712
+Epoch 68/200
+ - 92s - loss: 0.1940 - accuracy: 0.9710 - val_loss: 5.7735 - val_accuracy: 0.5649
+Epoch 69/200
+ - 90s - loss: 0.0985 - accuracy: 0.9789 - val_loss: 7.3233 - val_accuracy: 0.5243
+Epoch 70/200
+ - 91s - loss: 0.1374 - accuracy: 0.9757 - val_loss: 6.1201 - val_accuracy: 0.5759
+Epoch 71/200
+ - 91s - loss: 0.1149 - accuracy: 0.9765 - val_loss: 6.2996 - val_accuracy: 0.5352
+Epoch 72/200
+ - 91s - loss: 0.1184 - accuracy: 0.9789 - val_loss: 7.6509 - val_accuracy: 0.5274
+Epoch 73/200
+ - 93s - loss: 0.1453 - accuracy: 0.9753 - val_loss: 7.9816 - val_accuracy: 0.5039
+Epoch 74/200
+ - 90s - loss: 0.1396 - accuracy: 0.9765 - val_loss: 5.6292 - val_accuracy: 0.5775
+Epoch 75/200
+ - 91s - loss: 0.0727 - accuracy: 0.9840 - val_loss: 7.6990 - val_accuracy: 0.5493
+Epoch 76/200
+ - 91s - loss: 0.0947 - accuracy: 0.9832 - val_loss: 7.2531 - val_accuracy: 0.5352
+Epoch 77/200
+ - 91s - loss: 0.0826 - accuracy: 0.9812 - val_loss: 7.8731 - val_accuracy: 0.5540
+Epoch 78/200
+ - 90s - loss: 0.0950 - accuracy: 0.9812 - val_loss: 12.5645 - val_accuracy: 0.5008
+Epoch 79/200
+ - 91s - loss: 0.0936 - accuracy: 0.9851 - val_loss: 9.5828 - val_accuracy: 0.5196
+Epoch 80/200
+ - 91s - loss: 0.1231 - accuracy: 0.9765 - val_loss: 6.1108 - val_accuracy: 0.5712
+Epoch 81/200
+ - 90s - loss: 0.0718 - accuracy: 0.9879 - val_loss: 6.9968 - val_accuracy: 0.5712
+Epoch 82/200
+ - 92s - loss: 0.1062 - accuracy: 0.9843 - val_loss: 8.1393 - val_accuracy: 0.5258
+Epoch 83/200
+ - 91s - loss: 0.0862 - accuracy: 0.9824 - val_loss: 8.0556 - val_accuracy: 0.5618
+Epoch 84/200
+ - 92s - loss: 0.0793 - accuracy: 0.9847 - val_loss: 7.9097 - val_accuracy: 0.5696
+Epoch 85/200
+ - 91s - loss: 0.1625 - accuracy: 0.9789 - val_loss: 9.3375 - val_accuracy: 0.5462
+Epoch 86/200
+ - 93s - loss: 0.1234 - accuracy: 0.9824 - val_loss: 10.3462 - val_accuracy: 0.5243
+Epoch 87/200
+ - 92s - loss: 0.0955 - accuracy: 0.9832 - val_loss: 8.4833 - val_accuracy: 0.5493
+Epoch 88/200
+ - 92s - loss: 0.1889 - accuracy: 0.9793 - val_loss: 9.8802 - val_accuracy: 0.5571
+Epoch 89/200
+ - 92s - loss: 0.1306 - accuracy: 0.9777 - val_loss: 8.6227 - val_accuracy: 0.5509
+Epoch 90/200
+ - 91s - loss: 0.0931 - accuracy: 0.9836 - val_loss: 8.2279 - val_accuracy: 0.5853
+Epoch 91/200
+ - 91s - loss: 0.0881 - accuracy: 0.9847 - val_loss: 8.5544 - val_accuracy: 0.5649
+Epoch 92/200
+ - 93s - loss: 0.1026 - accuracy: 0.9851 - val_loss: 9.0105 - val_accuracy: 0.5305
+Epoch 93/200
+ - 90s - loss: 0.1952 - accuracy: 0.9820 - val_loss: 8.4049 - val_accuracy: 0.5696
+Epoch 94/200
+ - 92s - loss: 0.0930 - accuracy: 0.9840 - val_loss: 10.3350 - val_accuracy: 0.5086
+Epoch 95/200
+ - 92s - loss: 0.1213 - accuracy: 0.9796 - val_loss: 9.4251 - val_accuracy: 0.5587
+Epoch 96/200
+ - 91s - loss: 0.0837 - accuracy: 0.9851 - val_loss: 10.7704 - val_accuracy: 0.5665
+Epoch 97/200
+ - 91s - loss: 0.0813 - accuracy: 0.9859 - val_loss: 11.5376 - val_accuracy: 0.5571
+Epoch 98/200
+ - 92s - loss: 0.1085 - accuracy: 0.9840 - val_loss: 10.4497 - val_accuracy: 0.5681
+Epoch 99/200
+ - 93s - loss: 0.0985 - accuracy: 0.9816 - val_loss: 10.4888 - val_accuracy: 0.5493
+Epoch 100/200
+ - 92s - loss: 0.1345 - accuracy: 0.9832 - val_loss: 10.1844 - val_accuracy: 0.5493
+Epoch 101/200
+ - 92s - loss: 0.0713 - accuracy: 0.9851 - val_loss: 14.3135 - val_accuracy: 0.5305
+Epoch 102/200
+ - 90s - loss: 0.1907 - accuracy: 0.9750 - val_loss: 11.1725 - val_accuracy: 0.5430
+Epoch 103/200
+ - 93s - loss: 0.1195 - accuracy: 0.9840 - val_loss: 10.6185 - val_accuracy: 0.5540
+Epoch 104/200
+ - 93s - loss: 0.1925 - accuracy: 0.9777 - val_loss: 12.5539 - val_accuracy: 0.5618
+Epoch 105/200
+ - 91s - loss: 0.1637 - accuracy: 0.9769 - val_loss: 12.2424 - val_accuracy: 0.5274
+Epoch 106/200
+ - 91s - loss: 0.1332 - accuracy: 0.9816 - val_loss: 12.5868 - val_accuracy: 0.5258
