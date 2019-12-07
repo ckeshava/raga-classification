@@ -70,9 +70,6 @@ def baseline_model():
     model.add(MaxPooling2D(pool_size=(2, 2)))
 
 
-    model.add(Conv2D(256, (2, 2)))
-    model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(1, 2)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     #model.add(Dense(32))
@@ -104,7 +101,7 @@ history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation
 score = model.evaluate(np.array(X_test), np.array(y_test))
 print(score)
 
-model.save('fully_convolutional_model.h5')
+model.save('fully_convolutional_model_4-layers.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
 #kfold = KFold(n_splits=10, shuffle=True)
 #results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)
@@ -112,7 +109,7 @@ model.save('fully_convolutional_model.h5')
 
 
 # save history to a file
-with open('./trainHistoryDict_maxpool_dropout', 'wb') as file_pi:
+with open('./trainHistoryDict_maxpool_dropout_cnn4', 'wb') as file_pi:
     pickle.dump(history, file_pi)
 
 
