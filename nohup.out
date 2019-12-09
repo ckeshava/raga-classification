@@ -2,12 +2,12 @@ Using TensorFlow backend.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
 Instructions for updating:
 If using Keras pass *_constraint arguments to layers.
-2019-12-09 01:11:07.872242: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
+2019-12-09 13:50:26.419747: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2019-12-09 01:11:07.882047: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
-2019-12-09 01:11:07.883055: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557eee764a30 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2019-12-09 01:11:07.883089: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2019-12-09 01:11:07.883840: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2019-12-09 13:50:26.429131: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-12-09 13:50:26.430210: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5561b542dca0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-12-09 13:50:26.430243: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2019-12-09 13:50:26.431084: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
 
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
@@ -34,61 +34,47 @@ batch_normalization_1 (Batch (None, 478, 638, 32)      128
 _________________________________________________________________
 max_pooling2d_1 (MaxPooling2 (None, 119, 159, 32)      0         
 _________________________________________________________________
-conv2d_2 (Conv2D)            (None, 117, 157, 64)      18496     
+conv2d_2 (Conv2D)            (None, 117, 157, 32)      9248      
 _________________________________________________________________
-activation_2 (Activation)    (None, 117, 157, 64)      0         
+activation_2 (Activation)    (None, 117, 157, 32)      0         
 _________________________________________________________________
-batch_normalization_2 (Batch (None, 117, 157, 64)      256       
+batch_normalization_2 (Batch (None, 117, 157, 32)      128       
 _________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 14, 19, 64)        0         
+max_pooling2d_2 (MaxPooling2 (None, 14, 19, 32)        0         
 _________________________________________________________________
-conv2d_3 (Conv2D)            (None, 12, 17, 128)       73856     
+conv2d_3 (Conv2D)            (None, 12, 17, 64)        18496     
 _________________________________________________________________
-activation_3 (Activation)    (None, 12, 17, 128)       0         
+activation_3 (Activation)    (None, 12, 17, 64)        0         
 _________________________________________________________________
-batch_normalization_3 (Batch (None, 12, 17, 128)       512       
+batch_normalization_3 (Batch (None, 12, 17, 64)        256       
 _________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 1, 1, 128)         0         
+max_pooling2d_3 (MaxPooling2 (None, 1, 1, 64)          0         
 _________________________________________________________________
-flatten_1 (Flatten)          (None, 128)               0         
+flatten_1 (Flatten)          (None, 64)                0         
 _________________________________________________________________
-dense_1 (Dense)              (None, 8)                 1032      
+dense_1 (Dense)              (None, 128)               8320      
 _________________________________________________________________
-activation_4 (Activation)    (None, 8)                 0         
+activation_4 (Activation)    (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               16512     
+_________________________________________________________________
+activation_5 (Activation)    (None, 128)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 1032      
+_________________________________________________________________
+activation_6 (Activation)    (None, 8)                 0         
 =================================================================
-Total params: 95,176
-Trainable params: 94,728
-Non-trainable params: 448
+Total params: 55,016
+Trainable params: 54,760
+Non-trainable params: 256
 _________________________________________________________________
 None
-Train on 2555 samples, validate on 639 samples
+Train on 2896 samples, validate on 724 samples
 Epoch 1/150
- - 265s - loss: 3.1501 - accuracy: 0.1765 - val_loss: 4.0349 - val_accuracy: 0.1158
+ - 320s - loss: 2.2630 - accuracy: 0.1771 - val_loss: 2.0875 - val_accuracy: 0.1561
 Epoch 2/150
- - 262s - loss: 2.2151 - accuracy: 0.2039 - val_loss: 3.4767 - val_accuracy: 0.1064
+ - 310s - loss: 1.9681 - accuracy: 0.2182 - val_loss: 1.9768 - val_accuracy: 0.2251
 Epoch 3/150
- - 264s - loss: 2.0672 - accuracy: 0.2313 - val_loss: 2.5323 - val_accuracy: 0.1236
+ - 309s - loss: 1.8962 - accuracy: 0.2400 - val_loss: 1.9217 - val_accuracy: 0.2403
 Epoch 4/150
- - 264s - loss: 1.9447 - accuracy: 0.2658 - val_loss: 2.2471 - val_accuracy: 0.2238
-Epoch 5/150
- - 263s - loss: 1.8618 - accuracy: 0.3029 - val_loss: 2.1616 - val_accuracy: 0.2613
-Epoch 6/150
- - 265s - loss: 1.7794 - accuracy: 0.3405 - val_loss: 2.0083 - val_accuracy: 0.2723
-Epoch 7/150
- - 266s - loss: 1.6906 - accuracy: 0.3609 - val_loss: 1.9519 - val_accuracy: 0.2707
-Epoch 8/150
- - 266s - loss: 1.6243 - accuracy: 0.3789 - val_loss: 1.9733 - val_accuracy: 0.2394
-Epoch 9/150
- - 262s - loss: 1.5290 - accuracy: 0.4231 - val_loss: 1.8021 - val_accuracy: 0.3239
-Epoch 10/150
- - 260s - loss: 1.4308 - accuracy: 0.4701 - val_loss: 1.7377 - val_accuracy: 0.3474
-Epoch 11/150
- - 265s - loss: 1.3564 - accuracy: 0.4978 - val_loss: 1.8504 - val_accuracy: 0.3490
-Epoch 12/150
- - 260s - loss: 1.2774 - accuracy: 0.5276 - val_loss: 1.9323 - val_accuracy: 0.3443
-Epoch 13/150
- - 262s - loss: 1.1549 - accuracy: 0.5836 - val_loss: 2.0613 - val_accuracy: 0.3255
-Epoch 14/150
- - 266s - loss: 1.0969 - accuracy: 0.5973 - val_loss: 1.9026 - val_accuracy: 0.3443
-Epoch 15/150
- - 266s - loss: 1.0154 - accuracy: 0.6348 - val_loss: 1.8965 - val_accuracy: 0.3631
+ - 317s - loss: 1.8433 - accuracy: 0.2721 - val_loss: 1.8287 - val_accuracy: 0.2831

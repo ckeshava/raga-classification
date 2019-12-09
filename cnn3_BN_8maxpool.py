@@ -43,13 +43,13 @@ for raga in RAGAS:
 
 print(len(labels))
 print(len(data))
+data, labels = sklearn.utils.shuffle(data, labels, random_state=42)
 
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.25, shuffle=True, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.15, shuffle=True, random_state=42)
 
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 
-X_train, y_train = sklearn.utils.shuffle(X_train, y_train, random_state=42)
 
 def baseline_model():
     model = Sequential()
@@ -58,23 +58,23 @@ def baseline_model():
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
-    model.add(Conv2D(64, (3, 3)))
+    model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(8, 8)))
 
-    model.add(Conv2D(128, (3, 3)))
+    model.add(Conv2D(64, (3, 3)))
     model.add(Activation('relu'))
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(12, 12)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
-    #model.add(Dense(32))
-    #model.add(Activation('relu'))
+    model.add(Dense(128))
+    model.add(Activation('relu'))
 
-#    model.add(Dense(32))
-#    model.add(Activation('relu'))
-#    model.add(Dropout(0.2))
+    model.add(Dense(128))
+    model.add(Activation('relu'))
+    #model.add(Dropout(0.2))
 
     model.add(Dense(NUM_RAGAS))
     model.add(Activation('softmax'))

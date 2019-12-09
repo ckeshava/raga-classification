@@ -60,12 +60,16 @@ def baseline_model():
     for layer in model.layers[:16]:
         layer.trainable = False
 
-    model.add(Dense(128))
-    model.add(Activation('relu'))
+    x = model.output
+    x = Flatten()(x)
 
-    model.add(Dense(NUM_RAGAS))
-    model.add(Activation('softmax'))
-    return model
+    x = Dense(1024, activation='relu')
+    x = Dense(1024, activation='relu')
+
+
+
+    x = Dense(NUM_RAGAS), activation='softmax')
+    return x
 
 
     
