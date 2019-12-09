@@ -19,7 +19,7 @@ from sklearn.model_selection import KFold
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from keras.utils.vis_utils import plot_model
-
+import sklearn
 
 RAGAS = ["kalyani", "pantuvarali", "kedaragaula", "thodi", "begada", "bhairavi", "mohana", "sankarabharana"]
 NUM_RAGAS = len(RAGAS)
@@ -44,12 +44,12 @@ for raga in RAGAS:
 print(len(labels))
 print(len(data))
 
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.25, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.25, shuffle=True, random_state=42)
 
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 
-
+X_train, y_train = sklearn.utils.shuffle(X_train, y_train, random_state=42)
 
 def baseline_model():
     model = Sequential()
@@ -58,6 +58,15 @@ def baseline_model():
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(4, 4)))
 
+    model.add(Conv2D(64, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(8, 8)))
+
+    model.add(Conv2D(128, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(12, 12)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
     #model.add(Dense(32))
@@ -89,7 +98,7 @@ history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation
 score = model.evaluate(np.array(X_test), np.array(y_test))
 print(score)
 
-model.save('fully_convolutional_model_4-layers_with_batchnorm.h5')
+model.save('fully_convolutional_model_3_layers_with_batchnorm.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
 #kfold = KFold(n_splits=10, shuffle=True)
 #results = cross_val_score(estimator, np.array(data), np.array(labels), cv=kfold)
@@ -97,7 +106,7 @@ model.save('fully_convolutional_model_4-layers_with_batchnorm.h5')
 
 
 # save history to a file
-with open('./trainHistoryDict_maxpool_dropout_cnn4_batchnorm', 'wb') as file_pi:
+with open('./trainHistoryDict_maxpool_dropout_cnn3_batchnorm', 'wb') as file_pi:
     pickle.dump(history, file_pi)
 
 
