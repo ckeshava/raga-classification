@@ -63,10 +63,9 @@ def baseline_model():
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(16, 16)))
 
-    model.add(Conv2D(128, (3, 3)))
+    model.add(Conv2D(128, (1, 2)))
     model.add(Activation('relu'))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(16, 16)))
 
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
