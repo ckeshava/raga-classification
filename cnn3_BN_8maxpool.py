@@ -4,6 +4,7 @@ import pickle
 from keras.utils import to_categorical
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import matplotlib.pyplot as plt
+from keras.callbacks import EarlyStopping
 
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
@@ -45,7 +46,7 @@ print(len(labels))
 print(len(data))
 data, labels = sklearn.utils.shuffle(data, labels, random_state=42)
 
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.15, shuffle=True, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.01, shuffle=True, random_state=42)
 
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
@@ -61,26 +62,36 @@ def baseline_model():
     model.add(Conv2D(32, (3, 3)))
     model.add(Activation('relu'))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(8, 8)))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
     model.add(Conv2D(64, (3, 3)))
     model.add(Activation('relu'))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(12, 12)))
+    model.add(MaxPooling2D(pool_size=(4, 4)))
+
+    model.add(Conv2D(128, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(4, 4)))
 
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
-    model.add(Dense(128))
+    model.add(Dense(64))
     model.add(Activation('relu'))
+    model.add(Dropout(0.3))
 
-    model.add(Dense(128))
+    model.add(Dense(32))
     model.add(Activation('relu'))
-    #model.add(Dropout(0.2))
+    model.add(Dropout(0.3))
+
+    model.add(Dense(16))
+    model.add(Activation('relu'))
+    model.add(Dropout(0.3))
 
     model.add(Dense(NUM_RAGAS))
     model.add(Activation('softmax'))
 
     model.compile(loss='categorical_crossentropy',
-                  optimizer='rmsprop',
+                  optimizer='Nadam',
                   metrics=['accuracy'])
 
     # print(model.summary())
@@ -93,8 +104,9 @@ def baseline_model():
 model = baseline_model()
 print(model.summary())
 
+es = EarlyStopping(monitor='val_accuracy', patience=15)
 #history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
-history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_split=0.20, epochs=150, verbose=2)
+history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_data=(np.array(X_test), np.array(y_test)), epochs=150, verbose=2, callbacks=[es], batch_size=100)
 score = model.evaluate(np.array(X_test), np.array(y_test))
 print(score)
 
