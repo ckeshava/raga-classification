@@ -54,38 +54,57 @@ y_test = to_categorical(y_test)
 
 def baseline_model():
     model = Sequential()
-    model.add(Conv2D(32, (3, 3), input_shape=(480, 640, 3)))
+    #model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(32, (5, 5), input_shape=(480, 640, 3)))
     model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(4, 4)))
+    model.add(Dropout(0.1))
 
-    model.add(Conv2D(32, (3, 3)))
+    model.add(Conv2D(64, (5, 5)))
     model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(4, 4)))
-
-    model.add(Conv2D(64, (3, 3)))
-    model.add(Activation('relu'))
-    model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(4, 4)))
+    model.add(Dropout(0.1))
 
     model.add(Conv2D(128, (3, 3)))
     model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(BatchNormalization())
-    model.add(MaxPooling2D(pool_size=(4, 4)))
+    model.add(Dropout(0.1))
 
+    #model.add(Conv2D(128, (3, 3)))
+    #model.add(Activation('relu'))
+    #model.add(MaxPooling2D(pool_size=(2, 2)))
+    #model.add(BatchNormalization())
+
+    model.add(Conv2D(256, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(BatchNormalization())
+    model.add(Dropout(0.1))
+    
+    
     model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
+    model.add(Dense(128))
+    model.add(Activation('relu'))
+    model.add(BatchNormalization())
+    #model.add(Dropout(0.3))
+
     model.add(Dense(64))
     model.add(Activation('relu'))
-    model.add(Dropout(0.3))
-
-    model.add(Dense(32))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.3))
+    #model.add(Dropout(0.3))
+    model.add(BatchNormalization())
 
     model.add(Dense(16))
     model.add(Activation('relu'))
-    model.add(Dropout(0.3))
+    #model.add(Dropout(0.3))
+    model.add(BatchNormalization())
+
+    #model.add(Dense(64))
+    #model.add(Activation('relu'))
+    #model.add(BatchNormalization())
+
 
     model.add(Dense(NUM_RAGAS))
     model.add(Activation('softmax'))
@@ -102,13 +121,18 @@ def baseline_model():
 #logdir = "logs/scalars/" + str(datetime.now())
 #tensorboard_callback = keras.callbacks.Tensorboard(logdir=logdir)
 model = baseline_model()
+es = EarlyStopping(monitor='val_loss', patience=15)
+#history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
+history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_data=(np.array(X_test), np.array(y_test)), epochs=150, verbose=2, callbacks=[es], batch_size=32)
 print(model.summary())
 
-es = EarlyStopping(monitor='val_accuracy', patience=15)
-#history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
-history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_data=(np.array(X_test), np.array(y_test)), epochs=150, verbose=2, callbacks=[es], batch_size=100)
+from sklearn.metrics import plot_confusion_matrix
+y_pred = model.predict_classes(X_test)
+
 score = model.evaluate(np.array(X_test), np.array(y_test))
 print(score)
+
+print(confusion_matrix(y_true=y_test, y_pred=y_pred, labels=RAGAS, normalize=True))
 
 model.save('fully_convolutional_model_3_layers_with_batchnorm.h5')
 #estimator = KerasClassifier(build_fn=baseline_model, epochs=1, batch_size=5, verbose=2)
