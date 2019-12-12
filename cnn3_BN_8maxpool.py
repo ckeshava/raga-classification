@@ -22,35 +22,6 @@ from sklearn.model_selection import train_test_split
 from keras.utils.vis_utils import plot_model
 import sklearn
 
-RAGAS = ["kalyani", "pantuvarali", "kedaragaula", "thodi", "begada", "bhairavi", "mohana", "sankarabharana"]
-NUM_RAGAS = len(RAGAS)
-
-data = []
-labels = []
-ctr=0
-
-for raga in RAGAS:
-    inp_files = glob.glob(os.path.join(raga, "*.png"))
-    temp = [ctr] * len(inp_files)
-    ctr += 1
-    print("Raga: {} \t Number of Input files: {}".format(raga, len(inp_files)))
-    labels += temp
-
-    for f in inp_files:
-        img = load_img(f)  
-        x = img_to_array(img)  
-        data.append(x)
-        # np.append(data, x, axis=-1)
-
-print(len(labels))
-print(len(data))
-data, labels = sklearn.utils.shuffle(data, labels, random_state=42)
-
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.01, shuffle=True, random_state=42)
-
-y_train = to_categorical(y_train)
-y_test = to_categorical(y_test)
-
 
 def baseline_model():
     model = Sequential()
@@ -122,6 +93,39 @@ def baseline_model():
 #tensorboard_callback = keras.callbacks.Tensorboard(logdir=logdir)
 model = baseline_model()
 es = EarlyStopping(monitor='val_loss', patience=15)
+
+RAGAS = ["kalyani", "pantuvarali", "kedaragaula", "thodi", "begada", "bhairavi", "mohana", "sankarabharana"]
+NUM_RAGAS = len(RAGAS)
+
+data = []
+labels = []
+ctr=0
+
+for raga in RAGAS:
+    inp_files = glob.glob(os.path.join(raga, "*.png"))
+    temp = [ctr] * len(inp_files)
+    ctr += 1
+    print("Raga: {} \t Number of Input files: {}".format(raga, len(inp_files)))
+    labels += temp
+
+    for f in inp_files:
+        img = load_img(f)  
+        x = img_to_array(img)  
+        data.append(x)
+        # np.append(data, x, axis=-1)
+
+print(len(labels))
+print(len(data))
+data, labels = sklearn.utils.shuffle(data, labels, random_state=42)
+
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.01, shuffle=True, random_state=42)
+
+y_train = to_categorical(y_train)
+y_test = to_categorical(y_test)
+
+
+
+
 #history=model.fit(np.array(X_train), np.array(y_train), validation_split=0.0, epochs=2, verbose=2, callbacks=[tensorboard_callback])
 history=model.fit(np.array(X_train), np.array(y_train), shuffle=True, validation_data=(np.array(X_test), np.array(y_test)), epochs=150, verbose=2, callbacks=[es], batch_size=32)
 print(model.summary())
